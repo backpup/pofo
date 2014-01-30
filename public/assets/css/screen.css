@@ -400,13 +400,16 @@ th {
 
 html {
   margin: 0;
+  background: #F6F6F6;
 }
 
 body {
   margin: 0;
+  position: relative;
   font-family: OpenSans, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5;
+  margin-bottom: 4em;
 }
 
 ul, h1, h2, h3, p, li, header, nav {
@@ -472,12 +475,28 @@ footer {
   float: left;
   margin-right: 1.81818%;
   display: inline;
+  border-top: 1px solid #eae9e7;
+  border-bottom: 1px solid #eae9e7;
+  padding: 2em 0;
+  margin-top: 3em;
+  font-size: .8em;
   text-align: center;
 }
 
 /*base styles*/
+#top {
+  position: relative;
+  left: 0;
+  top: 0;
+  background: #F6F6F6;
+  -webkit-backface-visibility: hidden;
+}
+
 header {
+  padding: 3em 0;
   text-align: center;
+  color: #0263ae;
+  overflow: hidden;
 }
 
 a {
@@ -485,9 +504,10 @@ a {
 }
 
 nav {
-  border-top: 1px solid #a8e7ca;
-  border-bottom: 1px solid #a8e7ca;
-  padding: 1em 0;
+  overflow: hidden;
+  border-top: 1px solid #eae9e7;
+  border-bottom: 1px solid #eae9e7;
+  padding: 1.2em 0;
 }
 nav ul {
   text-align: center;
@@ -509,4 +529,24 @@ nav a {
 }
 nav a:hover {
   color: #fbae2c;
+}
+
+/* page specific styles */
+#banner {
+  display: block;
+  height: 500px;
+  background: #0380e0;
+  color: white;
+}
+
+.home {
+  margin-top: 3.5em;
+}
+
+.projects {
+  margin-bottom: 20px;
+}
+.projects img {
+  width: 100%;
+  border: 1px solid black;
 }

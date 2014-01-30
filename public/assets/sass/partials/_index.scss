@@ -1,0 +1,19 @@
+
+#banner{
+	display:block;
+	height:500px;
+	background:lighten($blue, 10);
+	color:white;
+}
+
+.home{
+	margin-top:3.5em;
+}
+.projects{
+	margin-bottom:20px;
+
+	img{
+		width:100%;
+		border:1px solid black;
+	}
+}

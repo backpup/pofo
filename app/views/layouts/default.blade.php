@@ -4,11 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>{{ $title }}</title>
-	<link rel="stylesheet" href="">
 	{{ HTML::style('/assets/css/screen.css') }}
+	{{ HTML::script('/assets/js/jquery.js') }}
 </head>
 <body>
 <div class="wrapper">
+<section id="top">
 	<header>
 		<h1 id="mainHeader">
 		<span class="header-hero">P</span>
@@ -22,11 +23,13 @@
 			<li>{{ HTML::link('contact', 'Contact') }}</li>
 		</ul>
 	</nav>
-
+</section>
 	@yield('content')
 	<footer>
 		&copy; PRAVIN RAI 2013
 	</footer>
 </div> <!-- close wrapper -->
+
+{{ HTML::script('/assets/js/test.js') }}
 </body>
 </html>

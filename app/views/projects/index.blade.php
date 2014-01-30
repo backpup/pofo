@@ -10,7 +10,7 @@
 	@foreach($projects as $project)
 	
 		<div class="projects">
-			<img src="" alt="">
+			<img src="assets/img/testimage.jpg" alt="">
 			<h2>{{ $project->title }}</h2>
 			<span class="type">{{ $project->type }}</span>
 			<p>{{ $project->description }}</p>
