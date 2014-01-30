@@ -11,9 +11,31 @@
 }
 .projects{
 	margin-bottom:20px;
+	position:relative;
+	background:$color1;
+	@include single-box-shadow(#333, 0px, 0px, 5px, -2px);
 
 	img{
 		width:100%;
 		border:1px solid black;
+		margin-left:-1px;
 	}
+	h2{
+		font-size:1.2em;
+		padding: 0 .833em;
+	}
+	p{
+		font-size:.8em;
+		padding:0 1.25em;
+	}
+}
+.type{
+	position:absolute;
+	top:5px;
+	left:5px;
+	background:$blue;
+	//border:2px solid $pink;
+	font-size:.8em;
+	color:white;
+	padding: .1em .8em;
 }

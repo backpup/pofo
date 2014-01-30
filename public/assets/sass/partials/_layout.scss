@@ -35,7 +35,10 @@ ul, h1, h2, h3, p, li, header, nav{
 .main{
 	@include squish(1, 1);
 	@include span-columns(14);
-	border: 1px solid black;
+}
+.mainContact{
+	@include squish(3, 3);
+	@include span-columns(10);
 }
 
 .projects{
@@ -44,8 +47,8 @@ ul, h1, h2, h3, p, li, header, nav{
 }
 footer{
 	@include span-columns(16);
-	border-top:1px solid $color1;
-	border-bottom:1px solid $color1;
+	border-top:1px solid darken($color1, 5%);
+	border-bottom:1px solid darken($color1, 5%);
 	padding:2em 0;
 	margin-top:3em;
 	font-size:.8em;
@@ -70,8 +73,8 @@ a{
 }
 nav{
 	overflow:hidden;
-	border-top:1px solid $color1;
-	border-bottom:1px solid $color1;
+	border-top:1px solid darken($color1, 5%);
+	border-bottom:1px solid darken($color1, 5%);
 	padding:1.2em 0;
 
 	ul{
@@ -83,11 +86,11 @@ nav{
 	}
 	a{
 		display:block;
-		text-transform:capitalize;
-		font-size:.95em;
+		text-transform:uppercase;
+		font-size:.9em;
 		padding:.5em 1em;
 		color:#A5A5A4;
-		@include transition(all, 0.2s, ease-in);
+		@include transition(all 0.2s ease-in);
 		&:hover{
 			color:$orange;
 		}

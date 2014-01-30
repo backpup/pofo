@@ -394,8 +394,8 @@ th {
 
 @font-face {
   font-family: "OpenSans";
-  src: url('../fonts/OpenSans-Regular.eot');
-  src: url('../fonts/OpenSans-Regular.eot?#iefix') format('eot'), url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans-Regular.svg') format('svg');
+  src: url('../fonts/OpenSans-Regular-webfont.eot');
+  src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Regular-webfont.svg') format('svg');
 }
 
 html {
@@ -453,7 +453,15 @@ ul, h1, h2, h3, p, li, header, nav {
   float: left;
   margin-right: 1.81818%;
   display: inline;
-  border: 1px solid black;
+}
+
+.mainContact {
+  margin-left: 19.09091%;
+  margin-right: 19.09091%;
+  width: 61.81818%;
+  float: left;
+  margin-right: 1.81818%;
+  display: inline;
 }
 
 .projects {
@@ -474,8 +482,8 @@ footer {
   float: left;
   margin-right: 1.81818%;
   display: inline;
-  border-top: 1px solid #eae9e7;
-  border-bottom: 1px solid #eae9e7;
+  border-top: 1px solid #deddd9;
+  border-bottom: 1px solid #deddd9;
   padding: 2em 0;
   margin-top: 3em;
   font-size: .8em;
@@ -502,8 +510,8 @@ a {
 
 nav {
   overflow: hidden;
-  border-top: 1px solid #eae9e7;
-  border-bottom: 1px solid #eae9e7;
+  border-top: 1px solid #deddd9;
+  border-bottom: 1px solid #deddd9;
   padding: 1.2em 0;
 }
 nav ul {
@@ -515,14 +523,14 @@ nav li {
 }
 nav a {
   display: block;
-  text-transform: capitalize;
-  font-size: .95em;
+  text-transform: uppercase;
+  font-size: .9em;
   padding: .5em 1em;
   color: #A5A5A4;
-  -webkit-transition: all, 0.2s, ease-in;
-  -moz-transition: all, 0.2s, ease-in;
-  -o-transition: all, 0.2s, ease-in;
-  transition: all, 0.2s, ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 nav a:hover {
   color: #fbae2c;
@@ -541,8 +549,81 @@ nav a:hover {
 
 .projects {
   margin-bottom: 20px;
+  position: relative;
+  background: #eae9e7;
+  -webkit-box-shadow: 0px 0px 5px -2px #333333;
+  -moz-box-shadow: 0px 0px 5px -2px #333333;
+  box-shadow: 0px 0px 5px -2px #333333;
 }
 .projects img {
   width: 100%;
   border: 1px solid black;
+  margin-left: -1px;
+}
+.projects h2 {
+  font-size: 1.2em;
+  padding: 0 .833em;
+}
+.projects p {
+  font-size: .8em;
+  padding: 0 1.25em;
+}
+
+.type {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #0263ae;
+  font-size: .8em;
+  color: white;
+  padding: .1em .8em;
+}
+
+.main {
+  color: #7a7978;
+}
+.main h1 {
+  font-size: 1.5em;
+  margin: .625em 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main p {
+  padding: 0 5em;
+  letter-spacing: .05em;
+}
+
+.mainContact {
+  /*Contact page styles start here */
+  color: #7a7978;
+}
+.mainContact #contactForm {
+  width: 70%;
+  margin: 0 auto;
+}
+.mainContact h2 {
+  font-size: 1.4em;
+  margin: .714em 0;
+}
+.mainContact #message {
+  display: block;
+}
+.mainContact textarea {
+  vertical-align: top;
+  border: 1px solid #eae9e7;
+  margin-bottom: .8em;
+  width: 100%;
+}
+.mainContact input[type='text'], .mainContact input[type='email'] {
+  border: 1px solid #eae9e7;
+  margin-bottom: .8em;
+  width: 80%;
+}
+.mainContact label {
+  font-size: .875em;
+  display: block;
+  margin-bottom: .2em;
+}
+.mainContact input[type='submit'] {
+  display: block;
 }
