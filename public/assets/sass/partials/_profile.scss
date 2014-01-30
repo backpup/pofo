@@ -32,11 +32,25 @@
 		margin-bottom:.8em;
 		width:100%;
 	}
-	input[type='text'], input[type='email']{
-
-		border:1px solid $color1;
+	.input-group{
+		@include clearfix;
+		//border:1px solid $color1;
 		margin-bottom:.8em;
-		width:80%;
+	}
+	.input-group-addon{
+		float:left;
+		display:inline-block;
+		width:10%;
+		border:1px solid $color1;
+		text-align:center;
+	}
+
+	input[type='text'], input[type='email']{
+		float:left;
+		display:inline-block;
+		border:1px solid $color1;
+		width:60%;
+	
 	}
 
 	label{
