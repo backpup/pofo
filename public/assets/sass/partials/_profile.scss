@@ -1,0 +1,54 @@
+.main{
+	color:$text;
+	
+	h1{
+		font-size:1.5em;
+		margin:.625em 0;
+		text-transform:uppercase;
+		text-align:center;
+	}
+	p{
+		padding:0 5em;
+		letter-spacing:.05em;
+	}
+}
+.mainContact{
+	/*Contact page styles start here */
+	color:$text;
+	#contactForm{
+		width:70%;
+		margin:0 auto;
+	}
+	h2{
+		font-size:1.4em;
+		margin:.714em 0;
+	}
+	#message{
+		display:block;
+	}
+	textarea{
+		vertical-align:top;
+		border:1px solid $color1;
+		margin-bottom:.8em;
+		width:100%;
+	}
+	input[type='text'], input[type='email']{
+
+		border:1px solid $color1;
+		margin-bottom:.8em;
+		width:80%;
+	}
+
+	label{
+		font-size:.875em;
+		display:block;
+		margin-bottom:.2em;
+
+	}
+	input[type='submit']{
+		display:block;
+	}
+
+
+}
+
