@@ -11,7 +11,19 @@
 |
 */
 
-Route::get('/', function()
-{
-	return "hello world";
+Route::get('/', array('as'=>'home', 'uses'=>'ProjectsController@getIndex'));
+
+Route::get('profile', function(){
+	return View::make('projects.profile')
+		->with('title', 'About me');
+});
+Route::get('contact', function(){
+	return View::make('projects.contact')
+		->with('title', 'Contact me');
+});
+
+
+
+Route::get('test', function(){
+	return Project::getAll();
 });

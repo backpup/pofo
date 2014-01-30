@@ -1,0 +1,78 @@
+@import "susy";
+
+$total-columns: 16;
+$column-width: 50px;
+$gutter-width: 20px;
+$grid-padding: 10px;
+
+html{
+	margin:0;
+}
+body{
+	margin:0;
+	font-family:OpenSans, Arial, sans-serif;
+	font-size:1em;
+	line-height:1.5;
+}
+ul, h1, h2, h3, p, li, header, nav{
+	margin:0;
+	padding:0;
+}
+.wrapper{
+	@include container;
+	//@include susy-grid-background;
+}
+@include with-grid-settings(12, 60px, 20px, 10px){
+	.home
+	{ 
+		@include container; 
+		//@include susy-grid-background;
+	}
+}
+.main{
+	@include squish(1, 1);
+	@include span-columns(14);
+	border: 1px solid black;
+}
+
+.projects{
+	@include span-columns(4, 12);
+	&:nth-child(3n) { @include omega; }
+}
+footer{
+	@include span-columns(16);
+	text-align:center;
+}
+
+/*base styles*/
+header{
+	text-align:center;
+}
+a{
+	text-decoration:none;
+}
+nav{
+	border-top:1px solid $lightgreen;
+	border-bottom:1px solid $lightgreen;
+	padding:1em 0;
+
+	ul{
+		text-align:center;
+	}
+	li{
+		list-style:none;
+		display:inline-block;
+	}
+	a{
+		display:block;
+		text-transform:capitalize;
+		font-size:.95em;
+		padding:.5em 1em;
+		color:#A5A5A4;
+		@include transition(all, 0.2s, ease-in);
+		&:hover{
+			color:$orange;
+		}
+	}
+}
+
