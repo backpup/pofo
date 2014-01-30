@@ -11,7 +11,6 @@ html{
 }
 body{
 	margin:0;
-	position:relative;
 	font-family:OpenSans, Arial, sans-serif;
 	font-size:1em;
 	line-height:1.5;
@@ -23,6 +22,7 @@ ul, h1, h2, h3, p, li, header, nav{
 }
 .wrapper{
 	@include container;
+	//position:relative;
 	//@include susy-grid-background;
 }
 @include with-grid-settings(12, 60px, 20px, 10px){
@@ -54,9 +54,8 @@ footer{
 
 /*base styles*/
 #top{
+
 	position:relative;
-	left:0;
-	top:0;
 	background:#F6F6F6;
 	-webkit-backface-visibility: hidden;
 }

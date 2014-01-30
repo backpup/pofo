@@ -405,7 +405,6 @@ html {
 
 body {
   margin: 0;
-  position: relative;
   font-family: OpenSans, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5;
@@ -486,8 +485,6 @@ footer {
 /*base styles*/
 #top {
   position: relative;
-  left: 0;
-  top: 0;
   background: #F6F6F6;
   -webkit-backface-visibility: hidden;
 }
@@ -533,7 +530,6 @@ nav a:hover {
 
 /* page specific styles */
 #banner {
-  display: block;
   height: 500px;
   background: #0380e0;
   color: white;
