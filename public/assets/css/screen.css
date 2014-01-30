@@ -394,8 +394,8 @@ th {
 
 @font-face {
   font-family: "OpenSans";
-  src: url('../fonts/OpenSans-Regular.eot');
-  src: url('../fonts/OpenSans-Regular.eot?#iefix') format('eot'), url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans-Regular.svg') format('svg');
+  src: url('../fonts/OpenSans-Regular-webfont.eot');
+  src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Regular-webfont.svg') format('svg');
 }
 
 html {
@@ -417,33 +417,13 @@ ul, h1, h2, h3, p, li, header, nav {
 }
 
 .wrapper {
-  *zoom: 1;
-  max-width: 1100px;
-  _width: 1100px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
+  position: relative;
+  width: 1120px;
+  margin: 0 auto;
 }
 
 .home {
-  *zoom: 1;
-  max-width: 940px;
-  _width: 940px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.home:after {
-  content: "";
-  display: table;
-  clear: both;
+  width: 100%;
 }
 
 .main {
@@ -485,8 +465,8 @@ footer {
 /*base styles*/
 #top {
   position: relative;
+  width: 1120px;
   background: #F6F6F6;
-  -webkit-backface-visibility: hidden;
 }
 
 header {
@@ -519,10 +499,10 @@ nav a {
   font-size: .95em;
   padding: .5em 1em;
   color: #A5A5A4;
-  -webkit-transition: all, 0.2s, ease-in;
-  -moz-transition: all, 0.2s, ease-in;
-  -o-transition: all, 0.2s, ease-in;
-  transition: all, 0.2s, ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 nav a:hover {
   color: #fbae2c;

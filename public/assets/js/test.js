@@ -7,6 +7,24 @@ $(document).ready(function(){
 	});
 });
 
+// $(document).ready(function(){
+	
+// 	$(window).on('scroll', function(e){
+// 		if($(this).scrollTop()>0)
+// 		{
+// 			$("#top").css({
+// 				top:$(this).scrollTop(),
+// 				position:'absolute'
+// 			});
+// 		}else{
+// 			$("#top").css({
+// 				top:0,
+// 				position:'fixed'
+// 			});
+// 		}
+// 	});
+// });
+
 
 // $(document).ready(function() {
 

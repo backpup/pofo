@@ -9,6 +9,7 @@
 </head>
 <body>
 <div class="wrapper">
+
 <section id="top">
 	<header>
 		<h1 id="mainHeader">
@@ -24,6 +25,7 @@
 		</ul>
 	</nav>
 </section>
+
 	@yield('content')
 	<footer>
 		&copy; PRAVIN RAI 2013
