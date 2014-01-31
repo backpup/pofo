@@ -3,6 +3,24 @@
 @section('content')
 <div class="mainContact">
 <h2>Hello</h2>
+
+@if(Session::has('appMsg'))
+<div class="appMessage">
+	 <p>{{ Session::get('appMsg') }}</p>
+</div>
+@endif
+@if($errors->has())
+<div class = "appMessage">
+	<p>The following errors have occured</p>
+	<ul id="form-errors">
+		{{ $errors->first('name', '<li>:message</li>' )}}
+		{{ $errors->first('email', '<li>:message</li>' )}}
+		{{ $errors->first('message', '<li>:message</li>' )}}
+	</ul>
+</div>
+@endif
+
+
 {{ Form::open(array('url'=>'contact', 'id'=>'contactForm')) }}
 
 	{{ Form::label('name', 'Name:') }}

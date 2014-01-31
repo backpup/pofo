@@ -2382,3 +2382,24 @@ nav a:hover {
 .mainContact input[type='submit'] {
   display: block;
 }
+
+.appMessage {
+  font-size: .9em;
+  width: 70%;
+  margin: 0 auto;
+  background: #eae9e7;
+  padding: 1em;
+  border: 1px solid #fbae2c;
+  margin-bottom: 1em;
+}
+.appMessage:after {
+  border: 1px solid white;
+}
+.appMessage li {
+  list-style-position: inside;
+  color: #ff7372;
+}
+.appMessage p {
+  color: #0263ae;
+  font-weight: bold;
+}

@@ -23,6 +23,8 @@ Route::get('contact', function(){
 });
 
 
+Route::post('contact', array('uses'=>'ProjectsController@postContactMe'));
+
 
 Route::get('test', function(){
 	return Project::getAll();
