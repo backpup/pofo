@@ -14,12 +14,12 @@
 	{{ Form::label('email', 'Email:') }}
 	<div class="input-group">
 	<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-	{{ Form::email('email') }}<br />
+	{{ Form::email('email', '', array('tabindex'=>20)) }}<br />
 	</div>
 
 
 	{{ Form::label('message', 'Message:') }}
-	{{ Form::textarea('message', '', array('rows'=>5)) }}
+	{{ Form::textarea('message', '', array('rows'=>5, 'tabindex'=>30)) }}
 
 
 	{{ Form::submit('send') }}

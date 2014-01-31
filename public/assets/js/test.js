@@ -3,8 +3,22 @@ $(document).ready(function(){
 	$(window).on('scroll', function(){
 		$("#top").css('top', $(this).scrollTop());
 		
+	});
+
+	
+	// $("#name").on('focus', function(){
+	// 	$(this).siblings('span').css('color', '#FBAE2C');
+	// });
+	$(".input-group").each(function(){
+		var input = $(this).find(":input");
+		input.on('focus', function(){
+			$(this).siblings('span').css('color', '#FBAE2C');
+		}).on('blur', function(){
+			$(this).siblings('span').css('color', '#7a7978');
+		});
 
 	});
+
 });
 
 

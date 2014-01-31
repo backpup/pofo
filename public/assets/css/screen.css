@@ -484,6 +484,7 @@ footer {
   display: inline;
   border-top: 1px solid #deddd9;
   border-bottom: 1px solid #deddd9;
+  color: #7a7978;
   padding: 2em 0;
   margin-top: 3em;
   font-size: .8em;
@@ -2280,7 +2281,7 @@ nav a:hover {
 /* page specific styles */
 #banner {
   height: 500px;
-  background: #0380e0;
+  background: #fbae2c;
   color: white;
 }
 
