@@ -9,8 +9,9 @@
 </head>
 <body>
 <div class="wrapper">
+
 <section id="top">
-	<header>
+	<header id="header">
 		<h1 id="mainHeader">
 		<span class="header-hero">P</span>
 		<span class="header-sidekick">R</span>
@@ -24,9 +25,10 @@
 		</ul>
 	</nav>
 </section>
+
 	@yield('content')
 	<footer>
-		&copy; PRAVIN RAI 2013
+		&copy; PRAVIN RAI {{ date('Y') }}
 	</footer>
 </div> <!-- close wrapper -->
 

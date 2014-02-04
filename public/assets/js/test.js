@@ -1,9 +1,9 @@
-$(document).ready(function(){
+ $(document).ready(function(){
 	
-	$(window).on('scroll', function(){
-		$("#top").css('top', $(this).scrollTop());
+// 	$(window).on('scroll', function(){
+// 		$("#top").css('top', $(this).scrollTop());
 		
-	});
+//	});
 
 	
 	// $("#name").on('focus', function(){
@@ -17,9 +17,48 @@ $(document).ready(function(){
 			$(this).siblings('span').css('color', '#7a7978');
 		});
 
+
 	});
 
 });
+
+// 	});
+// });
+
+$(window).on('scroll', function(){
+
+	if($(window).scrollTop()>=500)
+	{
+	
+		// $("#header").stop(true).animate({
+		// 	paddingTop: "1em", paddingBottom: "1em"}, 200);
+		$("#header").addClass("header-animate");
+		
+	}else{
+		$("#header").removeClass("header-animate");
+		// $("#header").stop(true).animate({
+		// 	paddingTop: "3em", paddingBottom: "3em"}, 200);
+		
+	}
+});
+// $(document).ready(function(){
+	
+// 	$(window).on('scroll', function(e){
+// 		if($(this).scrollTop()>0)
+// 		{
+// 			$("#top").css({
+// 				top:$(this).scrollTop(),
+// 				position:'absolute'
+// 			});
+// 		}else{
+// 			$("#top").css({
+// 				top:0,
+// 				position:'fixed'
+// 			});
+// 		}
+// 	});
+// });
+
 
 
 // $(document).ready(function() {

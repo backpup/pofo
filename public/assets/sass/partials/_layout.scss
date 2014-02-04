@@ -9,6 +9,7 @@ html{
 	margin:0;
 	background:#F6F6F6;
 }
+
 body{
 	margin:0;
 	font-family:OpenSans, Arial, sans-serif;
@@ -21,16 +22,19 @@ ul, h1, h2, h3, p, li, header, nav{
 	padding:0;
 }
 .wrapper{
-	@include container;
-	//position:relative;
-	//@include susy-grid-background;
+	position:relative;
+	width:1120px;
+	margin:0 auto;
 }
-@include with-grid-settings(12, 60px, 20px, 10px){
-	.home
-	{ 
-		@include container; 
-		//@include susy-grid-background;
-	}
+// @include with-grid-settings(12, 60px, 20px, 10px){
+// 	.home
+// 	{ 
+// 		@include container; 
+// 		//@include susy-grid-background;
+// 	}
+// }
+.home{
+	width:100%;
 }
 .main{
 	@include squish(1, 1);
@@ -59,16 +63,26 @@ footer{
 /*base styles*/
 #top{
 
-	position:relative;
+	position:fixed;
+	width:1120px;
 	background:#F6F6F6;
-	-webkit-backface-visibility: hidden;
+	top:0;
+	z-index:99;
+
+
 }
 header{
 	padding:3em 0;
 	text-align:center;
 	color:$blue;
-	overflow:hidden
+	overflow:hidden;
+	@include transition(all linear .2s);
 }
+
+.header-animate{
+	padding:1em 0;
+}
+
 a{
 	text-decoration:none;
 }
