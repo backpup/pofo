@@ -1,12 +1,28 @@
-$(document).ready(function(){
+// $(document).ready(function(){
 	
-	$(window).on('scroll', function(){
-		$("#top").css('top', $(this).scrollTop());
+// 	$(window).on('scroll', function(){
+// 		$("#top").css('top', $(this).scrollTop());
 		
 
-	});
-});
+// 	});
+// });
+console.log($("#banner").height());
+$(window).on('scroll', function(){
 
+	if($(window).scrollTop()>=500)
+	{
+	
+		// $("#header").stop(true).animate({
+		// 	paddingTop: "1em", paddingBottom: "1em"}, 200);
+		$("#header").addClass("header-animate");
+		
+	}else{
+		$("#header").removeClass("header-animate");
+		// $("#header").stop(true).animate({
+		// 	paddingTop: "3em", paddingBottom: "3em"}, 200);
+		
+	}
+})
 // $(document).ready(function(){
 	
 // 	$(window).on('scroll', function(e){

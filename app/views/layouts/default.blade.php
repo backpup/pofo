@@ -11,7 +11,7 @@
 <div class="wrapper">
 
 <section id="top">
-	<header>
+	<header id="header">
 		<h1 id="mainHeader">
 		<span class="header-hero">P</span>
 		<span class="header-sidekick">R</span>

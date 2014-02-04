@@ -59,9 +59,11 @@ footer{
 /*base styles*/
 #top{
 
-	position:relative;
+	position:fixed;
 	width:1120px;
 	background:#F6F6F6;
+	top:0;
+	z-index:99;
 
 
 }
@@ -69,8 +71,14 @@ header{
 	padding:3em 0;
 	text-align:center;
 	color:$blue;
-	overflow:hidden
+	overflow:hidden;
+	@include transition(all linear .2s);
 }
+
+.header-animate{
+	padding:1em 0;
+}
+
 a{
 	text-decoration:none;
 }

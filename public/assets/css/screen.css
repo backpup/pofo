@@ -464,9 +464,11 @@ footer {
 
 /*base styles*/
 #top {
-  position: relative;
+  position: fixed;
   width: 1120px;
   background: #F6F6F6;
+  top: 0;
+  z-index: 99;
 }
 
 header {
@@ -474,6 +476,15 @@ header {
   text-align: center;
   color: #0263ae;
   overflow: hidden;
+  -webkit-transition: all linear;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+
+.header-animate {
+  padding: 1em 0;
 }
 
 a {
@@ -510,8 +521,9 @@ nav a:hover {
 
 /* page specific styles */
 #banner {
+  margin-top: 222px;
   height: 500px;
-  background: #0380e0;
+  background: #39cccc;
   color: white;
 }
 

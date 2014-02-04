@@ -3,8 +3,8 @@
 
 @section('content')
 <div id="banner">
-	<h3>Hi</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, itaque.</p>
+	<!-- <h3>Hi</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, itaque.</p> -->
 </div>
 <section class="home">
 	@foreach($projects as $project)
