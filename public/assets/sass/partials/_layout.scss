@@ -5,6 +5,8 @@ $column-width: 50px;
 $gutter-width: 20px;
 $grid-padding: 10px;
 
+$container-style:magic;
+
 html{
 	margin:0;
 	background:#F6F6F6;
@@ -22,32 +24,34 @@ ul, h1, h2, h3, p, li, header, nav{
 	padding:0;
 }
 .wrapper{
-	position:relative;
-	width:1120px;
-	margin:0 auto;
+	// position:relative;
+	// width:1120px;
+	// margin:0 auto;
+	@include container;
+	//@include susy-grid-background;
 }
-// @include with-grid-settings(12, 60px, 20px, 10px){
-// 	.home
-// 	{ 
-// 		@include container; 
-// 		//@include susy-grid-background;
-// 	}
+@include with-grid-settings(12, 60px, 20px, 10px){
+	.home
+	{ 
+		@include container; 
+		//@include susy-grid-background;
+	}
+}
+// .home{
+// 	width:100%;
 // }
-.home{
-	width:100%;
-}
 .main{
 	@include squish(1, 1);
 	@include span-columns(14);
 }
 .mainContact{
-	@include squish(3, 3);
-	@include span-columns(10);
+	@include squish(4, 4);
+	@include span-columns(8);
 }
 
 .projects{
-	@include span-columns(4, 12);
-	&:nth-child(3n) { @include omega; }
+	@include span-columns(6, 12);
+	&:nth-child(2n) { @include omega; }
 }
 footer{
 	@include span-columns(16);
@@ -62,15 +66,14 @@ footer{
 
 /*base styles*/
 #top{
-
 	position:fixed;
-	width:1120px;
+	width:1100px;
+	//width:100%;
 	background:#F6F6F6;
 	top:0;
 	z-index:99;
-
-
 }
+
 header{
 	padding:3em 0;
 	text-align:center;

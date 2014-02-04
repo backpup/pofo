@@ -11,6 +11,7 @@
 <div class="wrapper">
 
 <section id="top">
+<div id="navBar">
 	<header id="header">
 		<h1 id="mainHeader">
 		<span class="header-hero">P</span>
@@ -24,6 +25,7 @@
 			<li>{{ HTML::link('contact', 'Contact') }}</li>
 		</ul>
 	</nav>
+</div>
 </section>
 
 	@yield('content')

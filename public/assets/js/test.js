@@ -22,11 +22,26 @@
 
 });
 
-// 	});
-// });
+
+
+ function navbarAdjuster(){
+ 	var sw = document.body.clientWidth;
+ 	if(sw < 1120)
+ 	{
+ 		$("#top").css('width', $("#banner").css('width'));
+ 	}else{
+ 		$("#top").css('width', 1100);
+ 	}
+ }
+$(window).resize(function(){
+	navbarAdjuster();
+});
+
+
+navbarAdjuster();
 
 $(window).on('scroll', function(){
-
+	navbarAdjuster();
 	if($(window).scrollTop()>=500)
 	{
 	
@@ -41,23 +56,6 @@ $(window).on('scroll', function(){
 		
 	}
 });
-// $(document).ready(function(){
-	
-// 	$(window).on('scroll', function(e){
-// 		if($(this).scrollTop()>0)
-// 		{
-// 			$("#top").css({
-// 				top:$(this).scrollTop(),
-// 				position:'absolute'
-// 			});
-// 		}else{
-// 			$("#top").css({
-// 				top:0,
-// 				position:'fixed'
-// 			});
-// 		}
-// 	});
-// });
 
 
 
