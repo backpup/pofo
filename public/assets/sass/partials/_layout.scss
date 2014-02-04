@@ -30,17 +30,17 @@ ul, h1, h2, h3, p, li, header, nav{
 	@include container;
 	//@include susy-grid-background;
 }
-@include with-grid-settings(12, 60px, 20px, 10px){
-	.home
-	{ 
-		@include container; 
-		//@include susy-grid-background;
-	}
-}
+// @include with-grid-settings(12, 60px, 20px, 10px){
+// 	.home
+// 	{ 
+// 		@include container; 
+// 		//@include susy-grid-background;
+// 	}
+// }
 // .home{
 // 	width:100%;
 // }
-.main{
+.main, .home{
 	@include squish(1, 1);
 	@include span-columns(14);
 }
@@ -94,6 +94,8 @@ nav{
 	border-top:1px solid darken($color1, 5%);
 	border-bottom:1px solid darken($color1, 5%);
 	padding:1.2em 0;
+	// font-family:Raleway;
+	// font-weight:bold;
 
 	ul{
 		text-align:center;

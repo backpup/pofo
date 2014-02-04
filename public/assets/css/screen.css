@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:700);
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -431,22 +432,7 @@ ul, h1, h2, h3, p, li, header, nav {
   clear: both;
 }
 
-.home {
-  *zoom: 1;
-  max-width: 940px;
-  _width: 940px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.home:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.main {
+.main, .home {
   margin-left: 6.36364%;
   margin-right: 6.36364%;
   width: 87.27273%;
