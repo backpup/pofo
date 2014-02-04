@@ -18,13 +18,14 @@
 .projects{
 	margin-bottom:20px;
 	position:relative;
-	background:$color1;
+	//background:$color1;
+	background:#7F2B2B;
+	border: 6px solid #DDDDDD;
+	@include box-sizing(border-box);
 	@include single-box-shadow(#333, 0px, 0px, 5px, -2px);
 
 	img{
 		width:100%;
-		border:1px solid black;
-		margin-left:-1px;
 	}
 	h2{
 		font-size:1.2em;

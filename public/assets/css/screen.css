@@ -2290,15 +2290,17 @@ nav a:hover {
 .projects {
   margin-bottom: 20px;
   position: relative;
-  background: #eae9e7;
+  background: #7F2B2B;
+  border: 6px solid #DDDDDD;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-box-shadow: 0px 0px 5px -2px #333333;
   -moz-box-shadow: 0px 0px 5px -2px #333333;
   box-shadow: 0px 0px 5px -2px #333333;
 }
 .projects img {
   width: 100%;
-  border: 1px solid black;
-  margin-left: -1px;
 }
 .projects h2 {
   font-size: 1.2em;
