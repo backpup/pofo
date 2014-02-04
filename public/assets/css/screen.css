@@ -2271,7 +2271,7 @@ nav a:hover {
 
 /* page specific styles */
 #banner {
-  margin-top: 222px;
+  margin-top: 219px;
   height: 500px;
   background: #39cccc;
   color: white;
@@ -2314,6 +2314,7 @@ nav a:hover {
 }
 
 .main {
+  margin-top: 222px;
   color: #7a7978;
 }
 .main h1 {
@@ -2329,6 +2330,7 @@ nav a:hover {
 
 .mainContact {
   /*Contact page styles start here */
+  margin-top: 222px;
   color: #7a7978;
 }
 .mainContact #contactForm {
