@@ -6,41 +6,193 @@
 	//background:lighten($blue, 10);
 
 	background:$banner1;
+	background-color: $banner1;
+    background-image:linear-gradient(#434343, #282828);
+    background-image:       linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
 	color:white;
-
+	 background-size:60px 60px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
 }
+.inner-intro{
+	padding-top:2em;
+	@include pre(1);
+	@include span-columns(7 ,16);
+
+	h1{
+		font-size:2.2em;
+		text-transform:uppercase;
+	}
+	p{
+		color:$bannerp;
+		font-size:1.2em;
+		text-transform:uppercase;
+	}
+}
+.inner-logo{
+	@include span-columns(8 omega, 16);
+}
+.inner-expertise{
+	margin-top:3em;
+	@include pad(1,1);
+	@include span-columns(14, 16);
+	
+	h2{
+		padding-bottom:.2em;
+		border-bottom: 2px solid lighten($bannerp, 20%);
+	}
+	@include layout(14){
+		.skill-list{
+			@include container;
+			.skills{
+				
+			}
+		}
+	}
+}
+
+/* Banner  logos */
+
+.skill-list{
+	padding-top:1em;
+}
+.skills{
+	text-align:center;
+	@include span-columns(1,4);
+	color:$bannerp;
+	&:nth-child(4n){ @include omega;}
+	margin-bottom:1em;
+}
+.laravel img{
+	-moz-transform:rotate(-2deg);
+}
+.php{
+	//float:left;
+	height:55px;
+	background:url(../img/php.png) no-repeat center;
+}
+
+/* ******************** */
 
 
 
 .home{
 	margin-top:3.5em;
 }
-.projects{
+.project-outer{
 	margin-bottom:20px;
 	position:relative;
-	//background:$color1;
-	background:#7F2B2B;
-	border: 6px solid #DDDDDD;
+	background:#DDDDDD;
+	//background:#7F2B2B;
+	border: 5px solid #DDDDDD;
 	@include box-sizing(border-box);
 	@include single-box-shadow(#333, 0px, 0px, 5px, -2px);
 
 	img{
 		width:100%;
+		margin-bottom:-5px;
+		padding-top:5px;
 	}
+
+}
+
+/* Related to project window */
+
+.overlay{
+	position:absolute;
+	width:100%;
+	height:100%;
+	//background:#DDDDDD;
+	background: $banner1;
+    background-image:linear-gradient(#434343, #282828);
+    background-image:linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+	color:white;
+	background-size:30px 30px;
+	display:none;
+	top:0;
+	left:0;
+}
+.project-info{
+	position:absolute;
+	padding:1em;
+	display:none;
+
 	h2{
-		font-size:1.2em;
-		padding: 0 .833em;
+		color:white;
+		font-family:Raleway, Arial, sans-serif;
 	}
 	p{
+		color:$text;
+	}
+	h3{
+		color:white;
+	}
+	span{
+		color:$text;
 		font-size:.8em;
-		padding:0 1.25em;
 	}
 }
+
+
+
+
+/* Related to addbar on project window */
+.addBar{
+	width:100%;
+	display:block;
+	background:black;
+	@include clearfix;
+
+}
+
+
+.circle{
+	background:black;
+	width:14px;
+	height:14px;
+	border-radius:24px;
+	float:left;
+	margin-top:5px;
+	margin-right:6px;
+}
+
+.red{
+	background:#FF4136;
+	box-shadow: 0px -3px 2px #9c241d inset;
+}
+.yellow{
+	background:#FFFF00;
+	box-shadow: 0px -3px 2px #c4aa04 inset;
+}
+.green{
+	background:$banner1;
+	box-shadow: 0px -3px 2px #2b9d38 inset;
+}
+.addressBar{
+	display:block;
+	background:white;
+	margin-left:64px;
+	border-radius:5px;
+	text-decoration:none;
+	font-family:Raleway;
+	font-size:.9em;
+	padding-left:8px;
+	color:#BFE1FF;
+	border: 1px solid lighten($text, 30%);
+	&:hover{
+		color:#BFE1FF;
+	}
+}
+
+
+
+/* ********************** */
 .type{
 	position:absolute;
 	top:5px;
 	left:5px;
 	background:$blue;
+	display:none;
 	//border:2px solid $pink;
 	font-size:.8em;
 	color:white;

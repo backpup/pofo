@@ -50,7 +50,7 @@ ul, h1, h2, h3, p, li, header, nav{
 	@include span-columns(8);
 }
 
-.projects{
+.project-outer{
 	@include span-columns(6, 12);
 	&:nth-child(2n) { @include omega; }
 }

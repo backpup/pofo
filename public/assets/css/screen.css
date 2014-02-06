@@ -399,6 +399,7 @@ th {
   src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Regular-webfont.svg') format('svg');
 }
 
+/* for addbar on projects */
 html {
   margin: 0;
   background: #F6F6F6;
@@ -450,13 +451,13 @@ ul, h1, h2, h3, p, li, header, nav {
   display: inline;
 }
 
-.projects {
+.project-outer {
   width: 48.78049%;
   float: left;
   margin-right: 2.43902%;
   display: inline;
 }
-.projects:nth-child(2n) {
+.project-outer:nth-child(2n) {
   float: right;
   margin-right: 0;
   *margin-left: -20px;
@@ -2280,18 +2281,109 @@ nav a:hover {
   margin-top: 219px;
   height: 500px;
   background: #39cccc;
+  background-color: #39cccc;
+  background-image: linear-gradient(#434343, #282828);
+  background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
   color: white;
+  background-size: 60px 60px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
+.inner-intro {
+  padding-top: 2em;
+  margin-left: 6.36364%;
+  width: 42.72727%;
+  float: left;
+  margin-right: 1.81818%;
+  display: inline;
+}
+.inner-intro h1 {
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+.inner-intro p {
+  color: #269393;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.inner-logo {
+  width: 49.09091%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+.inner-expertise {
+  margin-top: 3em;
+  padding-left: 6.36364%;
+  padding-right: 6.36364%;
+  width: 87.27273%;
+  float: left;
+  margin-right: 1.81818%;
+  display: inline;
+}
+.inner-expertise h2 {
+  padding-bottom: .2em;
+  border-bottom: 2px solid #4ed1d1;
+}
+.inner-expertise .skill-list {
+  *zoom: 1;
+  max-width: 960px;
+  _width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inner-expertise .skill-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Banner  logos */
+.skill-list {
+  padding-top: 1em;
+}
+
+.skills {
+  text-align: center;
+  width: 19.23077%;
+  float: left;
+  margin-right: 7.69231%;
+  display: inline;
+  color: #269393;
+  margin-bottom: 1em;
+}
+.skills:nth-child(4n) {
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+.laravel img {
+  -moz-transform: rotate(-2deg);
+}
+
+.php {
+  height: 55px;
+  background: url(../img/php.png) no-repeat center;
+}
+
+/* ******************** */
 .home {
   margin-top: 3.5em;
 }
 
-.projects {
+.project-outer {
   margin-bottom: 20px;
   position: relative;
-  background: #7F2B2B;
-  border: 6px solid #DDDDDD;
+  background: #DDDDDD;
+  border: 5px solid #DDDDDD;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2299,23 +2391,104 @@ nav a:hover {
   -moz-box-shadow: 0px 0px 5px -2px #333333;
   box-shadow: 0px 0px 5px -2px #333333;
 }
-.projects img {
+.project-outer img {
   width: 100%;
-}
-.projects h2 {
-  font-size: 1.2em;
-  padding: 0 .833em;
-}
-.projects p {
-  font-size: .8em;
-  padding: 0 1.25em;
+  margin-bottom: -5px;
+  padding-top: 5px;
 }
 
+/* Related to project window */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #39cccc;
+  background-image: linear-gradient(#434343, #282828);
+  background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
+  color: white;
+  background-size: 30px 30px;
+  display: none;
+  top: 0;
+  left: 0;
+}
+
+.project-info {
+  position: absolute;
+  padding: 1em;
+  display: none;
+}
+.project-info h2 {
+  color: white;
+  font-family: Raleway, Arial, sans-serif;
+}
+.project-info p {
+  color: #7a7978;
+}
+.project-info h3 {
+  color: white;
+}
+.project-info span {
+  color: #7a7978;
+  font-size: .8em;
+}
+
+/* Related to addbar on project window */
+.addBar {
+  width: 100%;
+  display: block;
+  background: black;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.circle {
+  background: black;
+  width: 14px;
+  height: 14px;
+  border-radius: 24px;
+  float: left;
+  margin-top: 5px;
+  margin-right: 6px;
+}
+
+.red {
+  background: #FF4136;
+  box-shadow: 0px -3px 2px #9c241d inset;
+}
+
+.yellow {
+  background: #FFFF00;
+  box-shadow: 0px -3px 2px #c4aa04 inset;
+}
+
+.green {
+  background: #39cccc;
+  box-shadow: 0px -3px 2px #2b9d38 inset;
+}
+
+.addressBar {
+  display: block;
+  background: white;
+  margin-left: 64px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: Raleway;
+  font-size: .9em;
+  padding-left: 8px;
+  color: #BFE1FF;
+  border: 1px solid #c6c5c5;
+}
+.addressBar:hover {
+  color: #BFE1FF;
+}
+
+/* ********************** */
 .type {
   position: absolute;
   top: 5px;
   left: 5px;
   background: #0263ae;
+  display: none;
   font-size: .8em;
   color: white;
   padding: .1em .8em;
@@ -2329,10 +2502,8 @@ nav a:hover {
   font-size: 1.5em;
   margin: .625em 0;
   text-transform: uppercase;
-  text-align: center;
 }
 .main p {
-  padding: 0 5em;
   letter-spacing: .05em;
 }
 
