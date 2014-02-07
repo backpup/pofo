@@ -2279,6 +2279,7 @@ nav a:hover {
 /* page specific styles */
 #banner {
   margin-top: 219px;
+  position: relative;
   height: 500px;
   background: #39cccc;
   background-color: #39cccc;
@@ -2288,10 +2289,14 @@ nav a:hover {
   background-size: 60px 60px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  width: 100%;
+  float: left;
+  margin-right: 1.81818%;
+  display: inline;
 }
 
 .inner-intro {
-  padding-top: 2em;
+  padding-top: 2.5em;
   margin-left: 6.36364%;
   width: 42.72727%;
   float: left;
@@ -2299,21 +2304,13 @@ nav a:hover {
   display: inline;
 }
 .inner-intro h1 {
-  font-size: 2.2em;
+  font-size: 2.1em;
   text-transform: uppercase;
 }
 .inner-intro p {
   color: #269393;
   font-size: 1.2em;
   text-transform: uppercase;
-}
-
-.inner-logo {
-  width: 49.09091%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -20px;
-  display: inline;
 }
 
 .inner-expertise {
@@ -2328,6 +2325,18 @@ nav a:hover {
 .inner-expertise h2 {
   padding-bottom: .2em;
   border-bottom: 2px solid #4ed1d1;
+  display: inline-block;
+}
+.inner-expertise p {
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Raleway, OpenSans, arial;
+  text-decoration: underline;
+  padding-left: 10px;
+}
+.inner-expertise .fa-chevron-right {
+  font-size: .8em;
 }
 .inner-expertise .skill-list {
   *zoom: 1;
@@ -2337,6 +2346,7 @@ nav a:hover {
   padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2em;
 }
 .inner-expertise .skill-list:after {
   content: "";
@@ -2350,6 +2360,7 @@ nav a:hover {
 }
 
 .skills {
+  position: relative;
   text-align: center;
   width: 19.23077%;
   float: left;
@@ -2364,9 +2375,10 @@ nav a:hover {
   *margin-left: -20px;
   display: inline;
 }
-
-.laravel img {
-  -moz-transform: rotate(-2deg);
+.skills .dot {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .php {
@@ -2374,6 +2386,18 @@ nav a:hover {
   background: url(../img/php.png) no-repeat center;
 }
 
+.jquery {
+  height: 55px;
+  background: url(../img/jquery.png) no-repeat center;
+}
+
+.laravel {
+  height: 55px;
+  background: url(../img/laravel.png) no-repeat center;
+}
+
+/* counter */
+/* logo */
 /* ******************** */
 .home {
   margin-top: 3.5em;
@@ -2383,7 +2407,13 @@ nav a:hover {
   margin-bottom: 20px;
   position: relative;
   background: #DDDDDD;
-  border: 5px solid #DDDDDD;
+  background: #51585F;
+  border: 5px solid #51585F;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

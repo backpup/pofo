@@ -10335,3 +10335,63 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
+
+
+
+/* My additions for now */
+ /* Css color rgb to hex hook */
+$.cssHooks.color = {
+    get: function(elem) {
+        if (elem.currentStyle)
+            var bg = elem.currentStyle["color"];
+        else if (window.getComputedStyle)
+            var bg = document.defaultView.getComputedStyle(elem,
+                null).getPropertyValue("color");
+        if (bg.search("rgb") == -1)
+            return bg;
+        else {
+            bg = bg.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+            function hex(x) {
+                return ("0" + parseInt(x).toString(16)).slice(-2);
+            }
+            return "#" + hex(bg[1]) + hex(bg[2]) + hex(bg[3]);
+        }
+    }
+}
+function hexToRGB(hex){
+	hex=hex.toUpperCase();
+	if(hex.substring(0,1)=='#')
+		hex=hex.substring(1);
+	var rgb = {};
+	rgb.r = parseInt(hex.substring(0,2), 16);
+	rgb.g = parseInt(hex.substring(2,4), 16);
+	rgb.b = parseInt(hex.substring(4,6), 16);
+	return rgb;
+}
+
+function startFade(obj, startColor, endColor, duration)
+{
+	var startRGB = hexToRGB(startColor);
+	var endRGB = hexToRGB(endColor);
+
+	var diffRGB = {};
+	diffRGB.r = endRGB.r - startRGB.r;
+	diffRGB.g = endRGB.g - startRGB.g;
+	diffRGB.b = endRGB.b - startRGB.b;
+
+	var steps = duration/20;
+	changeBackgroundColor(obj, startRGB, diffRGB, steps, 1);
+}
+
+function changeBackgroundColor(obj, start, diff, steps, currentStep)
+{
+	var cur = {};
+	cur.r = start.r + Math.round((diff.r/steps) * currentStep);
+	cur.g = start.g + Math.round((diff.g/steps) * currentStep);
+	cur.b = start.b + Math.round((diff.b/steps) * currentStep);
+	obj.css('color', 'rgb('+cur.r+','+cur.g+','+cur.b+')');
+	if(currentStep != steps)
+		setTimeout(function(){
+			changeBackgroundColor(obj, start, diff, steps, ++currentStep);
+		}, 20);
+}

@@ -2,6 +2,7 @@
 #banner{
 	//display:block;
 	margin-top:219px;
+	position:relative;
 	height:500px;
 	//background:lighten($blue, 10);
 
@@ -13,25 +14,32 @@
 	 background-size:60px 60px;
 	border-bottom-left-radius:10px;
 	border-bottom-right-radius:10px;
+	@include span-columns(16, 16);
 }
 .inner-intro{
-	padding-top:2em;
+	padding-top:2.5em;
 	@include pre(1);
 	@include span-columns(7 ,16);
 
 	h1{
-		font-size:2.2em;
+		font-size:2.1em;
 		text-transform:uppercase;
 	}
+
 	p{
 		color:$bannerp;
 		font-size:1.2em;
 		text-transform:uppercase;
 	}
 }
-.inner-logo{
-	@include span-columns(8 omega, 16);
-}
+// .inner-logo{
+// 	@include pull(2);
+// 	@include span-columns(6 omega,16);
+// 	// .logo{
+// 	// 	@include span-columns(3,6);
+// 	// 	&:nth-child(2n){ @include omega; }
+	
+// }
 .inner-expertise{
 	margin-top:3em;
 	@include pad(1,1);
@@ -40,13 +48,25 @@
 	h2{
 		padding-bottom:.2em;
 		border-bottom: 2px solid lighten($bannerp, 20%);
+		display:inline-block;
+	}
+	p{
+
+		display:inline-block;
+		font-weight:bold;
+		text-transform:uppercase;
+		font-family:Raleway, OpenSans, arial;
+		text-decoration:underline;
+		padding-left:10px;
+	}
+	.fa-chevron-right{
+		font-size:.8em;
 	}
 	@include layout(14){
 		.skill-list{
 			@include container;
-			.skills{
-				
-			}
+			margin-top:2em;
+
 		}
 	}
 }
@@ -57,20 +77,48 @@
 	padding-top:1em;
 }
 .skills{
+	position:relative;
 	text-align:center;
 	@include span-columns(1,4);
 	color:$bannerp;
 	&:nth-child(4n){ @include omega;}
 	margin-bottom:1em;
-}
-.laravel img{
-	-moz-transform:rotate(-2deg);
+	.dot{
+		position:absolute;
+		top:20px;
+		right:20px;
+	}
 }
 .php{
 	//float:left;
 	height:55px;
 	background:url(../img/php.png) no-repeat center;
 }
+.jquery{
+	height:55px;
+	background:url(../img/jquery.png) no-repeat center;
+}
+.laravel{
+	height:55px;
+	background:url(../img/laravel.png) no-repeat center;
+}
+
+/* counter */
+// .inner-counter{
+// 	margin-top:2em;
+// 	@include pad(4, 4);
+// 	@include span-columns(8, 16);
+// 	color:$bannerp;
+// }
+// .counter{
+// 	@include span-columns(1, 8);
+// 	&:nth-child(8n){ @include omega; }
+// }
+
+
+/* logo */
+
+
 
 /* ******************** */
 
@@ -84,7 +132,9 @@
 	position:relative;
 	background:#DDDDDD;
 	//background:#7F2B2B;
-	border: 5px solid #DDDDDD;
+	background:#51585F;
+	border: 5px solid #51585F;
+	@include border-radius(5px);
 	@include box-sizing(border-box);
 	@include single-box-shadow(#333, 0px, 0px, 5px, -2px);
 

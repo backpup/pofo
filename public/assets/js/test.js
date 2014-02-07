@@ -1,5 +1,77 @@
- $(document).ready(function(){
+
+
+/* For banner interactivity */ 
+
+var Banner = function(classBanner){
+	this.skillsList;
+	this.skillsWithImg = new Array();
+	this.banner = $('.'+classBanner);
+	this.counter = 0;
+	this.timer;
+	this.dotLog;
 	
+/* setting it up by giving ids to the skills in the list and storing them */
+/* storing ones with data-img separately */
+	var tempSkillsArray = new Array();
+	var tempSkillsWithImgArray = new Array();
+	$.each(this.banner.children(), function(i, val){
+		var skill = $(val).attr('id', "skill_"+i);
+		
+		tempSkillsArray.push(skill);
+		if(skill.data('img'))
+			tempSkillsWithImgArray.push(skill);
+
+	});
+	this.skillsList = tempSkillsArray;
+	this.skillswithImg = tempSkillsWithImgArray;
+}
+
+Banner.prototype.init = function(){
+	var num = Math.floor(Math.random()*8);
+	var dot = $('<i class="fa fa-square dot"></i>')
+	$('.inner-expertise p').html(this.skillsList[num].data('name'));
+	this.skillsList[num].append(dot);
+	this.dotLog=dot;
+	/* so that animate will move things +1 forward */
+	this.counter = num+1;
+	this.animate();
+
+}
+Banner.prototype.animate=function()
+{
+	var that = this;
+	this.timer = setTimeout(function(){
+		var counter = that.counter % 8;
+		that.smallDisplay(that.skillsList[counter]);
+		that.counter++;
+	}, 1200);
+	
+}
+
+Banner.prototype.smallDisplay = function(skill)
+{	
+
+	var that = this;
+	var dot = $('<i class="fa fa-square dot"></i>').css('display', 'none');
+	if(this.counter>0)
+		this.dotLog.remove();
+	dot.appendTo(skill);
+	this.dotLog = dot;
+	var name = skill.data('name');
+	dot.fadeIn(500, function(){
+		$('.inner-expertise p').html(name);
+		that.animate();
+	});
+
+}
+
+
+
+
+ $(document).ready(function(){
+	var checkBanner = new Banner('skill-list');
+	checkBanner.init();
+
 /* For contact page interactivity */
 	$(".input-group").each(function(){
 		var input = $(this).find(":input");
@@ -47,6 +119,9 @@
 	});
 
 });
+
+
+
 
 
 
