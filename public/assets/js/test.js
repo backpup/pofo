@@ -1,10 +1,10 @@
+
 var wordAnimate = function(id, duration){
 	this.word = $("#"+id);
 	this.secondCounter = 0;
 	this.duration=duration;
-	this.secondTimer;
 	
-}
+};
 wordAnimate.prototype.init=function(name)
 {
 	this.array = name.split('');
@@ -13,7 +13,7 @@ wordAnimate.prototype.init=function(name)
 	clearTimeout(this.secondTimer);
 	this.word.html('');
 	this.startAnim();
-}
+};
 
 wordAnimate.prototype.startAnim=function()
 {
@@ -30,41 +30,34 @@ wordAnimate.prototype.startAnim=function()
 	}else{
 		//that.word.html('');
 	}
-}
+};
 
 wordAnimate.prototype.typeAnim=function(letter)
 {
 	var temp = this.word.html()+letter;
 	this.word.html(temp);
 
-}
+};
 
 /* For banner interactivity */ 
 
 var Banner = function(classBanner){
-	this.skillsList;
-	this.skillsWithImg = new Array();
+	this.skillsWithImg = [];
 	this.banner = $('.'+classBanner);
 	this.counter = 0;
-	this.timer;
-	this.dotLog;
 
 	/* adding in another class now */
 
 	this.secondAnim = new wordAnimate('hook', 1000);
 
 
-
-
-
 	/* ********************* */
 
 
-	
 /* setting it up by giving ids to the skills in the list and storing them */
 /* storing ones with data-img separately */
-	var tempSkillsArray = new Array();
-	var tempSkillsWithImgArray = new Array();
+	var tempSkillsArray = [];
+	var tempSkillsWithImgArray = [];
 	$.each(this.banner.children(), function(i, val){
 		var skill = $(val).attr('id', "skill_"+i);
 		
@@ -75,11 +68,11 @@ var Banner = function(classBanner){
 	});
 	this.skillsList = tempSkillsArray;
 	this.skillswithImg = tempSkillsWithImgArray;
-}
+};
 
 Banner.prototype.init = function(){
 	var num = Math.floor(Math.random()*8);
-	var dot = $('<i class="fa fa-square dot"></i>')
+	var dot = $('<i class="fa fa-square dot"></i>');
 	$('.inner-expertise p').html(this.skillsList[num].data('name'));
 	this.skillsList[num].append(dot);
 	this.dotLog=dot;
@@ -87,7 +80,7 @@ Banner.prototype.init = function(){
 	this.counter = num+1;
 	this.animate();
 
-}
+};
 Banner.prototype.animate=function()
 {
 	var that = this;
@@ -97,7 +90,7 @@ Banner.prototype.animate=function()
 		that.counter++;
 	}, 1200);
 	
-}
+};
 
 Banner.prototype.smallDisplay = function(skill)
 {	
@@ -116,9 +109,7 @@ Banner.prototype.smallDisplay = function(skill)
 		that.animate();
 	});
 
-}
-
-
+};
 
 
  $(document).ready(function(){
@@ -160,15 +151,7 @@ Banner.prototype.smallDisplay = function(skill)
 			$(this).remove();
 			
 		});
-		// $(this).find('.project-info').slideUp(200, function(){
-		// 	$(this).css('display', 'none');
-		// 	fin.fadeOut(400, function(){
-		// 		$(this).remove();
-		// 		isOverlay = false;
-		// 	});
-		// 	console.log('hello');
-			
-		// });
+
 	});
 
 });
@@ -178,15 +161,15 @@ Banner.prototype.smallDisplay = function(skill)
 
 
 
- function navbarAdjuster(){
- 	var sw = document.body.clientWidth;
- 	if(sw < 1110)
- 	{
- 		$("#top").css('width', '100%');
- 	}else{
- 		$("#top").css('width', 1100);
- 	}
- }
+function navbarAdjuster(){
+	var sw = document.body.clientWidth;
+	if(sw < 1110)
+	{
+		$("#top").css('width', '100%');
+	}else{
+		$("#top").css('width', 1100);
+	}
+}
 $(window).resize(function(){
 	navbarAdjuster();
 });
@@ -198,15 +181,10 @@ $(window).on('scroll', function(){
 	//navbarAdjuster();
 	if($(window).scrollTop()>=500)
 	{
-		// $("#header").stop(true).animate({
-		// 	paddingTop: "1em", paddingBottom: "1em"}, 200);
 		$("#header").addClass("header-animate");
 		
 	}else{
 		$("#header").removeClass("header-animate");
-		// $("#header").stop(true).animate({
-		// 	paddingTop: "3em", paddingBottom: "3em"}, 200);
 		
 	}
 });
-
