@@ -1,4 +1,43 @@
+var wordAnimate = function(id, duration){
+	this.word = $("#"+id);
+	this.secondCounter = 0;
+	this.duration=duration;
+	this.secondTimer;
+	
+}
+wordAnimate.prototype.init=function(name)
+{
+	this.array = name.split('');
+	this.secondCounter = 0;
+	this.stepDuration = this.duration/this.array.length;
+	clearTimeout(this.secondTimer);
+	this.word.html('');
+	this.startAnim();
+}
 
+wordAnimate.prototype.startAnim=function()
+{
+	var that = this;
+	//console.log(this.array);
+
+	that.typeAnim(this.array[this.secondCounter]);
+	if(this.secondCounter < this.array.length-1)
+	{
+		this.secondCounter++;
+		this.secondTimer = setTimeout(function(){
+			that.startAnim();
+		}, that.stepDuration);
+	}else{
+		//that.word.html('');
+	}
+}
+
+wordAnimate.prototype.typeAnim=function(letter)
+{
+	var temp = this.word.html()+letter;
+	this.word.html(temp);
+
+}
 
 /* For banner interactivity */ 
 
@@ -9,6 +48,18 @@ var Banner = function(classBanner){
 	this.counter = 0;
 	this.timer;
 	this.dotLog;
+
+	/* adding in another class now */
+
+	this.secondAnim = new wordAnimate('hook', 1000);
+
+
+
+
+
+	/* ********************* */
+
+
 	
 /* setting it up by giving ids to the skills in the list and storing them */
 /* storing ones with data-img separately */
@@ -58,8 +109,10 @@ Banner.prototype.smallDisplay = function(skill)
 	dot.appendTo(skill);
 	this.dotLog = dot;
 	var name = skill.data('name');
+	//$('.inner-expertise p').html(name);
+	that.secondAnim.init(name);
 	dot.fadeIn(500, function(){
-		$('.inner-expertise p').html(name);
+		
 		that.animate();
 	});
 
