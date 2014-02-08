@@ -49,6 +49,7 @@
 		padding-bottom:.2em;
 		border-bottom: 2px solid lighten($bannerp, 20%);
 		display:inline-block;
+		
 	}
 	p{
 
@@ -58,6 +59,9 @@
 		font-family:Raleway, OpenSans, arial;
 		text-decoration:underline;
 		padding-left:10px;
+
+		-moz-animation:blink 1s infinite;
+		border-right:1px transparent white;	
 	}
 	.fa-chevron-right{
 		font-size:.8em;
@@ -70,7 +74,9 @@
 		}
 	}
 }
-
+@keyframes blink{
+	50%{border-right:1px solid white;}
+}
 /* Banner  logos */
 
 .skill-list{
@@ -132,8 +138,9 @@
 	position:relative;
 	background:#DDDDDD;
 	//background:#7F2B2B;
-	background:#51585F;
-	border: 5px solid #51585F;
+	//background:#51585F;
+	background:darken($bannerp, 20%);
+	border: 5px solid darken($bannerp,20%);
 	@include border-radius(5px);
 	@include box-sizing(border-box);
 	@include single-box-shadow(#333, 0px, 0px, 5px, -2px);

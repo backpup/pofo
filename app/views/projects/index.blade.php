@@ -5,7 +5,7 @@
 <div id="banner">
 	<div class="inner-intro">
 	<h1>Hi,</h1><h1> Thanks for Visiting</h1>
-	<p>I'm Pravin Rai and I'm a Web Developer.</p>
+	<p>I'm Pravin Rai and I'm passionate about web development</p>
 	</div>
 <!-- 	<div class="inner-logo">
 		<div class="logo current-logo">
@@ -16,7 +16,7 @@
 		</div>
 	</div> -->
 	<div class="inner-expertise">
-	<h2>What i use <i class="fa fa-chevron-right fa-fw"></i></h2><p></p>
+	<h2>What i use <i class="fa fa-chevron-right fa-fw"></i></h2><p id="hook"></p>
 		<div class="skill-list">
 			<div class="skills" data-name="html">
 				<i class="fa fa-html5 fa-3x"></i>

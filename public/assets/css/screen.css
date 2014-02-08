@@ -2334,6 +2334,8 @@ nav a:hover {
   font-family: Raleway, OpenSans, arial;
   text-decoration: underline;
   padding-left: 10px;
+  -moz-animation: blink 1s infinite;
+  border-right: 1px transparent white;
 }
 .inner-expertise .fa-chevron-right {
   font-size: .8em;
@@ -2352,6 +2354,12 @@ nav a:hover {
   content: "";
   display: table;
   clear: both;
+}
+
+@keyframes blink {
+  50% {
+    border-right: 1px solid white;
+  }
 }
 
 /* Banner  logos */
@@ -2407,8 +2415,8 @@ nav a:hover {
   margin-bottom: 20px;
   position: relative;
   background: #DDDDDD;
-  background: #51585F;
-  border: 5px solid #51585F;
+  background: #114242;
+  border: 5px solid #114242;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
