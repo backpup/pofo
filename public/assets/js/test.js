@@ -18,7 +18,6 @@ wordAnimate.prototype.init=function(name)
 wordAnimate.prototype.startAnim=function()
 {
 	var that = this;
-	//console.log(this.array);
 
 	that.typeAnim(this.array[this.secondCounter]);
 	if(this.secondCounter < this.array.length-1)
@@ -98,14 +97,13 @@ Banner.prototype.smallDisplay = function(skill)
 	var that = this;
 	var dot = $('<i class="fa fa-square dot"></i>').css('display', 'none');
 	if(this.counter>0)
-		this.dotLog.remove();
+		this.dotLog.remove();  //has to exist before it can be removed
 	dot.appendTo(skill);
 	this.dotLog = dot;
 	var name = skill.data('name');
 	//$('.inner-expertise p').html(name);
 	that.secondAnim.init(name);
-	dot.fadeIn(500, function(){
-		
+	dot.fadeIn(500, function(){	
 		that.animate();
 	});
 

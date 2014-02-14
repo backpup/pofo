@@ -28,13 +28,13 @@
 				<i class="fa fa-code fa-3x"></i>
 			</div>
 			<div class="skills jquery" data-img="jquery" data-name="jquery">
-				<!-- <img src="assets/img/jquery.png"> -->
+	
 			</div>
 			<div class="skills php" data-img="php" data-name="php">
-				<!-- <img src="assets/img/php.png"> -->
+	
 			</div>
 			<div class="skills laravel" data-img="laravel" data-name="laravel">
-				<!-- <img src="assets/img/laravelfour.png"> -->
+		
 			</div>
 			<div class="skills" data-name="linux">
 				<i class="fa fa-linux fa-3x"></i>
@@ -44,16 +44,6 @@
 			</div>
 		</div><!--skill-list end-->
 	</div><!--inner-expertise end-->
-<!-- 	<div class="inner-counter">
-		<div class="counter"><i class = "fa fa-square"></i></div>
-		<div class="counter"><i class = "fa fa-square"></i></div>
-		<div class="counter"><i class = "fa fa-square"></i></div>
-		<div class="counter"><i class = "fa fa-square"></i></div>
-		<div class="counter"><i class = "fa fa-square"></i></div>
-		<div class="counter"><i class = "fa fa-square"></i></div>
-		<div class="counter"><i class = "fa fa-square"></i></div>
-		<div class="counter"><i class = "fa fa-square"></i></div>
-	</div> -->
 	
 </div>
 <section class="home">
@@ -76,8 +66,6 @@
 			<img src="assets/img/dd.jpg" alt="">
 			
 			<span class="type">{{ $project->type }}</span>
-			
-		<!-- 	<a href="#">Link</a> -->
 
 		</div>  <!--project-outer-->
 
