@@ -1,7 +1,7 @@
 
 #banner{
 	//display:block;
-	margin-top:219px;
+	margin-top:65px;
 	position:relative;
 	height:500px;
 	//background:lighten($blue, 10);
@@ -109,18 +109,6 @@
 	background:url(../img/laravel.png) no-repeat center;
 }
 
-/* counter */
-// .inner-counter{
-// 	margin-top:2em;
-// 	@include pad(4, 4);
-// 	@include span-columns(8, 16);
-// 	color:$bannerp;
-// }
-// .counter{
-// 	@include span-columns(1, 8);
-// 	&:nth-child(8n){ @include omega; }
-// }
-
 
 /* logo */
 
@@ -132,6 +120,7 @@
 
 .home{
 	margin-top:3.5em;
+	
 }
 .project-outer{
 	margin-bottom:20px;
@@ -204,13 +193,17 @@
 
 
 .circle{
-	background:black;
-	width:14px;
-	height:14px;
+	//background:black;
+	width:13px;
+	height:13px;
 	border-radius:24px;
 	float:left;
 	margin-top:5px;
 	margin-right:6px;
+	color:#E4E5E5;
+	&:first-of-type{
+		margin-left:3px;
+	}
 }
 
 .red{

@@ -44,7 +44,7 @@ class ProjectsController extends BaseController{
 			return Redirect::to('contact')
 				->with('appMsg', 'Thanks, will get in touch soon');
 		}else{
-			return Redirect::to('contact')->withErrors($validator)->withInput();
+			return Redirect::to('/')->withErrors($validator)->withInput();
 		}
 
 	}

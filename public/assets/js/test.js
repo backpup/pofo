@@ -108,7 +108,68 @@ Banner.prototype.smallDisplay = function(skill)
 	});
 
 };
+// document.onclick=function(){
+// 	alert($(window).scrollTop());
+// }
 
+//var navPos = $("#mainNav").offset().top;
+var navPos = 112;
+$('#mainNav').offset().top = navPos;
+
+$(window).on('scroll', function(){
+	var nav = $('#mainNav');
+	var banner = $('#banner');
+	
+	console.log(nav.height());
+	if($(this).scrollTop()<112)
+	{
+		nav.css({
+			top:navPos-$(this).scrollTop(),
+			opacity:'1'
+		});
+	}else {
+		nav.css({
+			top:'0',
+			opacity:'.8'
+		});
+	}
+
+});
+
+function navbarAdjuster(){
+	var sw = document.body.clientWidth;
+	var bannerWidth = $('#banner').width();
+	$('#mainNav').width(bannerWidth);
+}
+$(window).resize(function(){
+	navbarAdjuster();
+});
+
+
+var NavHandler=function(){
+
+	this.timer=null;
+	this.locations=[0, 612, 1688];
+	var that = this;
+	$.each($('.mainLink'), function(i, val){
+		link = $(this);
+		link.click(function(e){
+			e.preventDefault();
+			return that.scrollTo(that.locations[i]);
+			
+		})
+	});
+}
+NavHandler.prototype.scrollTo=function(i){
+	$('html, body').animate({scrollTop:i}, 800);
+
+}
+var nav = new NavHandler();
+
+if($('#appMessage')[0]!=undefined)
+{
+	nav.scrollTo(1688);
+}
 
  $(document).ready(function(){
 	var checkBanner = new Banner('skill-list');
@@ -159,30 +220,19 @@ Banner.prototype.smallDisplay = function(skill)
 
 
 
-function navbarAdjuster(){
-	var sw = document.body.clientWidth;
-	if(sw < 1110)
-	{
-		$("#top").css('width', '100%');
-	}else{
-		$("#top").css('width', 1100);
-	}
-}
-$(window).resize(function(){
-	navbarAdjuster();
-});
+// 
 
 
-navbarAdjuster();
+// navbarAdjuster();
 
-$(window).on('scroll', function(){
-	//navbarAdjuster();
-	if($(window).scrollTop()>=500)
-	{
-		$("#header").addClass("header-animate");
+// $(window).on('scroll', function(){
+// 	//navbarAdjuster();
+// 	if($(window).scrollTop()>=500)
+// 	{
+// 		$("#header").addClass("header-animate");
 		
-	}else{
-		$("#header").removeClass("header-animate");
+// 	}else{
+// 		$("#header").removeClass("header-animate");
 		
-	}
-});
+// 	}
+// });

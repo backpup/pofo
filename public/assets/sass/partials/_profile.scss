@@ -11,9 +11,30 @@
 		letter-spacing:.05em;
 	}
 }
+
+
+.divider{
+	//border-top:1px solid darken($color1, 5%);
+	text-transform:uppercase;
+	.intro{
+		color:#DDDDDD;
+		font-size:1.6em;
+	}
+	//border-bottom:1px solid darken($color1, 5%);
+	font-family:Raleway, OpenSans, Arial, sans-serif;
+	.info{
+		//color:#333333;
+		color:darken(#DDDDDD, 15%);
+	}
+	margin-bottom:50px;
+}
+.formContainer{
+	width:600px;
+	margin:0 auto;
+}
 .mainContact{
 	/*Contact page styles start here */
-	margin-top:222px;
+	//margin-top:100px;
 	color:$text;
 	#contactForm{
 		width:90%;
@@ -31,6 +52,7 @@
 		border:1px solid $color1;
 		margin-bottom:.8em;
 		width:100%;
+
 	}
 	.input-group{
 		@include clearfix;
@@ -42,12 +64,14 @@
 		display:inline-block;
 		width:10%;
 		border:1px solid $color1;
+		padding:4px;
 		text-align:center;
 	}
 
 	input[type='text'], input[type='email']{
 		float:left;
 		display:inline-block;
+		padding:5px;
 		border:1px solid $color1;
 		width:60%;
 	
@@ -63,7 +87,7 @@
 		display:block;
 	}
 }
-.appMessage{
+#appMessage{
 	font-size:.9em;
 	width:70%;
 	margin:0 auto;

@@ -25,30 +25,27 @@ ul, h1, h2, h3, p, li, header, nav{
 	padding:0;
 }
 .wrapper{
-	// position:relative;
-	// width:1120px;
-	// margin:0 auto;
+
 	@include container;
 	//@include susy-grid-background;
+	.homeWrapper{
+		border-bottom:1px solid $color1;
+		padding-bottom:60px;
+		@include span-columns(16);
+	}
 }
-// @include with-grid-settings(12, 60px, 20px, 10px){
-// 	.home
-// 	{ 
-// 		@include container; 
-// 		//@include susy-grid-background;
-// 	}
-// }
-// .home{
-// 	width:100%;
-// }
+
 .main, .home{
 	@include squish(1, 1);
 	@include span-columns(14);
 }
-.mainContact{
-	@include squish(4, 4);
-	@include span-columns(8);
-}
+// .divider{
+// 	@include reset-columns;
+// }
+// .mainContact{
+// 	@include squish(4, 4);
+// 	@include span-columns(8);
+// }
 
 .project-outer{
 	@include span-columns(6, 12);
@@ -67,16 +64,17 @@ footer{
 
 /*base styles*/
 #top{
-	position:fixed;
-	width:1100px;
+	//position:fixed;
+	//width:1100px;
 	//width:100%;
 	background:#F6F6F6;
-	top:0;
-	z-index:99;
+
+	// top:0;
+	// z-index:99;
 }
 
 header{
-	padding:3em 0;
+	padding:2em 0;
 	text-align:center;
 	color:$blue;
 	overflow:hidden;
@@ -84,7 +82,7 @@ header{
 }
 
 .header-animate{
-	padding:1em 0;
+	padding:.6em 0;
 }
 
 a{
@@ -92,10 +90,14 @@ a{
 }
 nav{
 	overflow:hidden;
+	position:fixed;
+	background:#F6F6F6;
 	border-top:1px solid darken($color1, 5%);
 	border-bottom:1px solid darken($color1, 5%);
-	padding:1.2em 0;
-	// font-family:Raleway;
+	padding:1em 0;
+	z-Index:99;
+	width:1100px;
+	//font-family:Raleway;
 	// font-weight:bold;
 
 	ul{
@@ -108,7 +110,7 @@ nav{
 	a{
 		display:block;
 		text-transform:uppercase;
-		font-size:.9em;
+		font-size:.8em;
 		padding:.5em 1em;
 		color:#A5A5A4;
 		@include transition(all 0.2s ease-in);

@@ -432,20 +432,19 @@ ul, h1, h2, h3, p, li, header, nav {
   display: table;
   clear: both;
 }
-
-.main, .home {
-  margin-left: 6.36364%;
-  margin-right: 6.36364%;
-  width: 87.27273%;
+.wrapper .homeWrapper {
+  border-bottom: 1px solid #eae9e7;
+  padding-bottom: 60px;
+  width: 100%;
   float: left;
   margin-right: 1.81818%;
   display: inline;
 }
 
-.mainContact {
-  margin-left: 25.45455%;
-  margin-right: 25.45455%;
-  width: 49.09091%;
+.main, .home {
+  margin-left: 6.36364%;
+  margin-right: 6.36364%;
+  width: 87.27273%;
   float: left;
   margin-right: 1.81818%;
   display: inline;
@@ -480,15 +479,11 @@ footer {
 
 /*base styles*/
 #top {
-  position: fixed;
-  width: 1100px;
   background: #F6F6F6;
-  top: 0;
-  z-index: 99;
 }
 
 header {
-  padding: 3em 0;
+  padding: 2em 0;
   text-align: center;
   color: #0263ae;
   overflow: hidden;
@@ -500,7 +495,7 @@ header {
 }
 
 .header-animate {
-  padding: 1em 0;
+  padding: .6em 0;
 }
 
 a {
@@ -509,9 +504,13 @@ a {
 
 nav {
   overflow: hidden;
+  position: fixed;
+  background: #F6F6F6;
   border-top: 1px solid #deddd9;
   border-bottom: 1px solid #deddd9;
-  padding: 1.2em 0;
+  padding: 1em 0;
+  z-Index: 99;
+  width: 1100px;
 }
 nav ul {
   text-align: center;
@@ -523,7 +522,7 @@ nav li {
 nav a {
   display: block;
   text-transform: uppercase;
-  font-size: .9em;
+  font-size: .8em;
   padding: .5em 1em;
   color: #A5A5A4;
   -webkit-transition: all 0.2s ease-in;
@@ -2278,7 +2277,7 @@ nav a:hover {
 
 /* page specific styles */
 #banner {
-  margin-top: 219px;
+  margin-top: 65px;
   position: relative;
   height: 500px;
   background: #39cccc;
@@ -2404,7 +2403,6 @@ nav a:hover {
   background: url(../img/laravel.png) no-repeat center;
 }
 
-/* counter */
 /* logo */
 /* ******************** */
 .home {
@@ -2480,13 +2478,16 @@ nav a:hover {
 }
 
 .circle {
-  background: black;
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   border-radius: 24px;
   float: left;
   margin-top: 5px;
   margin-right: 6px;
+  color: #E4E5E5;
+}
+.circle:first-of-type {
+  margin-left: 3px;
 }
 
 .red {
@@ -2545,9 +2546,26 @@ nav a:hover {
   letter-spacing: .05em;
 }
 
+.divider {
+  text-transform: uppercase;
+  font-family: Raleway, OpenSans, Arial, sans-serif;
+  margin-bottom: 50px;
+}
+.divider .intro {
+  color: #DDDDDD;
+  font-size: 1.6em;
+}
+.divider .info {
+  color: #b7b7b7;
+}
+
+.formContainer {
+  width: 600px;
+  margin: 0 auto;
+}
+
 .mainContact {
   /*Contact page styles start here */
-  margin-top: 222px;
   color: #7a7978;
 }
 .mainContact #contactForm {
@@ -2577,11 +2595,13 @@ nav a:hover {
   display: inline-block;
   width: 10%;
   border: 1px solid #eae9e7;
+  padding: 4px;
   text-align: center;
 }
 .mainContact input[type='text'], .mainContact input[type='email'] {
   float: left;
   display: inline-block;
+  padding: 5px;
   border: 1px solid #eae9e7;
   width: 60%;
 }
@@ -2594,7 +2614,7 @@ nav a:hover {
   display: block;
 }
 
-.appMessage {
+#appMessage {
   font-size: .9em;
   width: 70%;
   margin: 0 auto;
@@ -2603,14 +2623,14 @@ nav a:hover {
   border: 1px solid #fbae2c;
   margin-bottom: 1em;
 }
-.appMessage:after {
+#appMessage:after {
   border: 1px solid white;
 }
-.appMessage li {
+#appMessage li {
   list-style-position: inside;
   color: #ff7372;
 }
-.appMessage p {
+#appMessage p {
   color: #0263ae;
   font-weight: bold;
 }

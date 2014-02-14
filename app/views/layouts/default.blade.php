@@ -8,9 +8,10 @@
 	{{ HTML::script('/assets/js/jquery.js') }}
 </head>
 <body>
-<div class="wrapper">
 
+<div class="wrapper">
 <section id="top">
+
 <div id="navBar">
 	<header id="header">
 		<h1 id="mainHeader">
@@ -20,12 +21,14 @@
 	</header>
 	<nav id="mainNav">
 		<ul>
-			<li>{{ HTML::link('/', 'Home')}}</li>
-			<li>{{ HTML::link('profile', 'Profile')}}</li>
-			<li>{{ HTML::link('contact', 'Contact') }}</li>
+			<li>{{ HTML::link('/', 'Home', array('class'=>"mainLink"))}}</li>
+			<li><a href="#" class="mainLink">Portfolio</a></li>
+			<li><a href="#" class="mainLink">Contact</a></li>
 		</ul>
 	</nav>
+
 </div>
+
 </section>
 
 	@yield('content')
