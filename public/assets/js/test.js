@@ -143,7 +143,7 @@ Banner.prototype.smallDisplay = function(skill)
 			});
 		}
 	}
-	scrollAdjuster();
+	scrollAdjuster();  //add
 	$(window).on('scroll', scrollAdjuster);
 
 })();
