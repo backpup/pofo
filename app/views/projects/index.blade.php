@@ -56,18 +56,18 @@
 				<div class="circle red"></i></div>
 				<div class="circle green"></div>
 				<div class="circle yellow"></div>
-				<a class = "addressBar" href="http://weddingsite.raipravin.com">http://weddingsite.raipravin.com</a>
+				<a class = "addressBar" href="{{ $project->projectLink }}">{{ $project->projectLink }}</a>
 			</div>
 			<div class="project-info">
-				<h2>Wedding Site</h2>
-				<p>My first ever web project and what got me into web development. It involved lot of googling, youtubing and scrambling for ideas, but I was so happy when I was done, and surprised and proud that it came out looking decent. <span>(p.s. might have gone overboard with animations)</span></p>
+				<h2>{{ $project->title }}</h2>
+				<p>{{ $project->description }}</p>
 
-				<h3>2012</h3>
-				<a href=""><h3>Visit</h3></a>
+				<h3>{{ $project->year }}</h3>
+				<a href="{{ $project->projectLink }}"><h3>Visit</h3></a>
 			</div>
-			<img src="assets/img/dd.jpg" alt="">
+			<img src="assets/img/{{ $project->imageLink }}" alt="">
 			
-			<span class="type">{{ $project->type }}</span>
+			<!-- <span class="type">{{ $project->type }}</span> -->
 
 		</div>  <!--project-outer-->
 
