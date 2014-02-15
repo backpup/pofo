@@ -120,32 +120,39 @@ Banner.prototype.smallDisplay = function(skill)
 	});
 
 };
-// document.onclick=function(){
-// 	alert($(window).scrollTop());
-// }
 
-//var navPos = $("#mainNav").offset().top;
-var navPos = 112;
-$('#mainNav').offset().top = navPos;
-
-$(window).on('scroll', function(){
-	var nav = $('#mainNav');
-	var banner = $('#banner');
 	
-	if($(this).scrollTop()<112)
-	{
-		nav.css({
-			top:navPos-$(this).scrollTop(),
-			opacity:'1'
-		});
-	}else {
-		nav.css({
-			top:'0',
-			opacity:'.8'
-		});
+(function(){
+	var navPos = 112;
+	$('#mainNav').offset().top = navPos;
+
+	function scrollAdjuster(){
+		var nav = $('#mainNav');
+		var banner = $('#banner');
+		
+		if($(window).scrollTop()<=112)
+		{
+			nav.css({
+				top:navPos-$(window).scrollTop(),
+				opacity:'1'
+			});
+		}else {
+			nav.css({
+				top:'0',
+				opacity:'.8'
+			});
+		}
 	}
 
-});
+	$(window).on('scroll', scrollAdjuster);
+
+})();
+
+
+
+
+
+
 addressBarAdjuster();
 navbarAdjuster();
 function navbarAdjuster(){
