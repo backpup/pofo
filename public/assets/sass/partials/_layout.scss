@@ -50,6 +50,9 @@ ul, h1, h2, h3, p, li, header, nav{
 .project-outer{
 	@include span-columns(6, 12);
 	&:nth-child(2n) { @include omega; }
+	@include MQ(MS){
+		@include span-columns(12, 12);
+	}
 }
 footer{
 	@include span-columns(16);

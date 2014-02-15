@@ -20,7 +20,10 @@
 	padding-top:2.5em;
 	@include pre(1);
 	@include span-columns(7 ,16);
+	@include MQ(L){
 
+		@include span-columns(15, 16);
+	}
 	h1{
 		font-size:2.1em;
 		text-transform:uppercase;
@@ -44,7 +47,7 @@
 	margin-top:3em;
 	@include pad(1,1);
 	@include span-columns(14, 16);
-	
+	@include MQ(S){ margin-top:1em; }
 	h2{
 		padding-bottom:.2em;
 		border-bottom: 2px solid lighten($bannerp, 20%);
@@ -70,6 +73,7 @@
 		.skill-list{
 			@include container;
 			margin-top:2em;
+			@include MQ(S){ margin-top:1em; }
 
 		}
 	}
@@ -93,6 +97,9 @@
 		position:absolute;
 		top:20px;
 		right:20px;
+	// 	@include MQ(L){
+	// 		right:15px;
+	// 	}
 	}
 }
 .php{
@@ -166,20 +173,66 @@
 	h2{
 		color:white;
 		font-family:Raleway, Arial, sans-serif;
+		// @include MQ(ML){
+		// 	font-size:1em;
+		// }
 	}
 	p{
 		color:$text;
+		// 	@include MQ(ML){
+		// 	font-size:.8em;
+		// }
 	}
 	h3{
 		color:white;
+		// 	@include MQ(ML){
+		// 	font-size:.9em;
+		// }
 	}
 	span{
 		color:$text;
 		font-size:.8em;
+		// 	@include MQ(ML){
+		// 	font-size:.9em;
+		// }
 	}
 }
 
+.project-info-sm{
+	position:absolute;
+	padding:1em;
+	display:none;
 
+	h2{
+		color:white;
+		font-family:Raleway, Arial, sans-serif;
+		font-size:1em;
+		// @include MQ(ML){
+		// 	font-size:1em;
+		// }
+	}
+	p{
+		color:$text;
+		font-size:.8em;
+		// 	@include MQ(ML){
+		// 	font-size:.8em;
+		// }
+	}
+	h3{
+		color:white;
+		font-size:.9em;
+		// 	@include MQ(ML){
+		// 	font-size:.9em;
+		// }
+	}
+	span{
+		color:$text;
+		font-size:.9em;
+		// 	@include MQ(ML){
+		// 	font-size:.9em;
+		// }
+	}
+}
 
 
 /* Related to addbar on project window */
@@ -229,9 +282,9 @@
 	padding-left:8px;
 	color:#BFE1FF;
 	border: 1px solid lighten($text, 30%);
-	&:hover{
-		color:#BFE1FF;
-	}
+	// &:hover{
+	// 	color:#BFE1FF;
+	// }
 }
 
 

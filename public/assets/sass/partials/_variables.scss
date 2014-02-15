@@ -22,3 +22,30 @@ $yellow-shadow: #c4aa04;
 
 $green: #2ECC40;
 $green-shadow: #2b9d38;
+
+//Breakpoint variables
+$S: 435px;
+$M: 636px;
+$MS:750px;
+$ML: 850px;
+$L: 901px;
+
+//mq mixin
+
+@mixin MQ($canvas){
+	@if $canvas == S{
+		@media only screen and (max-width:$S) { @content; }
+	}
+	@if $canvas == M{
+		@media only screen and (max-width:$M) { @content; }
+	}
+	@if$canvas == MS{
+		@media only screen and (max-width: $MS) { @content; }
+	}
+	@if $canvas == ML {
+		@media only screen and (max-width:$ML - 1) { @content; }
+	}
+	@if $canvas == L {
+		@media only screen and (max-width:$L - 1){ @content; }
+	}
+}
