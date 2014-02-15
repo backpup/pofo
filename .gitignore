@@ -2,7 +2,6 @@
 /vendor
 /public/assets/.sass-cache
 /app/config/mail.php
-/public/assets/img
 composer.phar
 composer.lock
 .DS_Store
