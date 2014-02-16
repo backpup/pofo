@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ $title }}</title>
 	{{ HTML::style('/assets/css/screen.css') }}
 	{{ HTML::script('/assets/js/jquery.js') }}
@@ -17,6 +17,7 @@
 		<h1 id="mainHeader">
 		<span class="header-hero">P</span>
 		<span class="header-sidekick">R</span>
+
 		</h1>
 	</header>
 	<nav id="mainNav">

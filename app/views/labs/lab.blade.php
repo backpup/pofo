@@ -1,0 +1,85 @@
+@extends('layouts.bootstrap')
+
+@section('content')
+
+
+<div class="container">
+	<div class="panel panel-info ">
+		<div class="panel-heading">
+			<h2 class="panel-title">Hello there</h2>
+		</div>
+		<div class="panel-body">
+		<p>Here you will find stuff I created as an experiment or because I had need for it at one point or another. Trivial bits of code that probably won't be of any use to most. Decided to leave it here just in case someone finds use for it as I had at one point.</p>
+		</div>
+	</div><!--panel-->
+	<div class="page-header">
+		<h4>VLC playlist generator</h4>
+	</div>
+	<div class="well">
+		<p>If you've ever needed to play a video for a presentation or other occasions where you needed to skip around, there's only two options available; either do it manually or use a video editing software. But editing seems like an overkill if you don't care for fancy transitions and don't mind abrupt jumps during the play. If you use vlc player, with some trivial editing of the playlist you can just play the same video over and over with different start and end point specified and won't have to skip around manually. This playlist generator will help you do that</p>
+	</div>
+	<div class="row">
+	<section class="playlist-generator">
+		<div class="col-md-8 col-md-offset-2">
+			<label for ="fileLocation">File Location:</label>
+			<input type="text" class="form-control" placeholder="location of file goes here"/>
+			<p class="pull-right">
+			<button type="button" id="addIntervalBtn" class="btn btn-primary">Add More Intervals</button>
+			</p>
+		</div>
+		<div class="intervalLabel col-md-6"><h3>Start Time</h3></div>
+		<div class="intervalLabel col-md-6"><h3>End Time</h3></div>
+		<div class=" new col-md-6 col-md-offset-3">
+			<div class="col-md-2">
+				<label for ="">Hour</label>
+				<div class="input-group">
+					<input type="text" class="form-control hour" placeholder="00">
+				</div>
+			</div>
+			<div class="col-md-2">
+			<label for ="">Minutes</label>
+				<div class="input-group">
+		
+					<input type="text" class="form-control minutes" placeholder="00">
+				</div>
+			</div>
+				<div class="col-md-2">
+			<label for ="">Seconds</label>
+				<div class="input-group">
+		
+					<input type="text" class="form-control seconds" placeholder="00">
+				</div>
+			</div>
+
+			<div class="col-md-2">
+			<label for ="">Hour</label>
+				<div class="input-group">
+		
+					<input type="text" class="form-control hour" placeholder="00">
+			</div>
+			</div>
+			<div class="col-md-2">
+			<label for ="">Minutes</label>
+				<div class="input-group">
+			
+					<input type="text" class="form-control minutes" placeholder="00">
+			</div>
+			</div>
+			<div class="col-md-2">
+			<label for ="">Seconds</label>
+				<div class="input-group">
+
+					<input type="text" class="form-control seconds" placeholder="00">
+			</div>
+			</div>
+
+	
+		</div><!--new-->
+
+	</section>
+	</div>
+
+</div><!--container-->
+
+
+@endsection

@@ -79,9 +79,17 @@ footer{
 header{
 	padding:2em 0;
 	text-align:center;
-	color:$blue;
+	//font-size:1.4em;
+	color:$banner2;
 	overflow:hidden;
 	@include transition(all linear .2s);
+	.header-hero{
+	
+	}
+	.header-sidekick{
+		color:$banner1;
+	}
+
 }
 
 .header-animate{

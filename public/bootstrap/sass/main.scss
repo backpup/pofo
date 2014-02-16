@@ -1,0 +1,30 @@
+@import "compass/css3";
+
+@include font-face("OpenSans", font-files("OpenSans-Regular-webfont.woff", "OpenSans-Regular-webfont.ttf", 
+	"OpenSans-Regular-webfont.svg"), "OpenSans-Regular-webfont.eot");
+
+body{
+	font-family:OpenSans, Arial, Helvetica, sans-serif;
+}
+#addIntervalBtn{
+	margin:1em 0 0 0;
+}
+.new{
+	clear:both;
+	border: 1px solid #CCCCCC;
+	padding-bottom:1em;
+	margin-bottom:1em;
+	padding-top:.2em;
+	@include background-image(linear-gradient(left,  #FFFFFF, #CCCCCC 50%, #FFFFFF 50%));
+	.col-md-2{
+		text-align:center;
+	}
+}
+
+
+.intervalLabel{
+	text-align:center;
+	h3{
+		color:darken(#D9EDF7, 20%);
+	}
+}

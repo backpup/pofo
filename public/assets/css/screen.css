@@ -493,13 +493,16 @@ footer {
 header {
   padding: 2em 0;
   text-align: center;
-  color: #0263ae;
+  color: #5d5d5d;
   overflow: hidden;
   -webkit-transition: all linear;
   -webkit-transition-delay: 0.2s;
   -moz-transition: all linear 0.2s;
   -o-transition: all linear 0.2s;
   transition: all linear 0.2s;
+}
+header .header-sidekick {
+  color: #39cccc;
 }
 
 .header-animate {
@@ -2474,6 +2477,29 @@ nav a:hover {
   left: 0;
 }
 
+.project-info-bg {
+  position: absolute;
+  padding: 1em;
+  display: none;
+}
+.project-info-bg h2 {
+  color: white;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 1.8em;
+}
+.project-info-bg p {
+  color: #7a7978;
+  font-size: 1.2em;
+}
+.project-info-bg h3 {
+  color: white;
+  font-size: 1.4em;
+}
+.project-info-bg span {
+  color: #7a7978;
+  font-size: .8em;
+}
+
 .project-info {
   position: absolute;
   padding: 1em;
@@ -2636,7 +2662,7 @@ nav a:hover {
 }
 .mainContact textarea {
   vertical-align: top;
-  border: 1px solid #eae9e7;
+  border: 2px solid #eae9e7;
   margin-bottom: .8em;
   width: 100%;
 }
@@ -2649,15 +2675,16 @@ nav a:hover {
   float: left;
   display: inline-block;
   width: 10%;
-  border: 1px solid #eae9e7;
+  border: 2px solid #eae9e7;
   padding: 4px;
+  font-size: 16px;
   text-align: center;
 }
 .mainContact input[type='text'], .mainContact input[type='email'] {
   float: left;
   display: inline-block;
   padding: 5px;
-  border: 1px solid #eae9e7;
+  border: 2px solid #eae9e7;
   width: 60%;
 }
 .mainContact label {

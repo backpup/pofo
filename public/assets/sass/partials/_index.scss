@@ -130,6 +130,7 @@
 	
 }
 .project-outer{
+
 	margin-bottom:20px;
 	position:relative;
 	background:#DDDDDD;
@@ -165,6 +166,34 @@
 	top:0;
 	left:0;
 }
+.project-info-bg{
+	position:absolute;
+	padding:1em;
+	display:none;
+
+	h2{
+		color:white;
+		font-family:Raleway, Arial, sans-serif;
+		font-size:1.8em;
+
+	}
+	p{
+		color:$text;
+		font-size:1.2em;
+
+	}
+	h3{
+		color:white;
+		font-size:1.4em;
+
+	}
+	span{
+		color:$text;
+		font-size:.8em;
+
+	}
+}
+
 .project-info{
 	position:absolute;
 	padding:1em;
@@ -173,28 +202,20 @@
 	h2{
 		color:white;
 		font-family:Raleway, Arial, sans-serif;
-		// @include MQ(ML){
-		// 	font-size:1em;
-		// }
+
 	}
 	p{
 		color:$text;
-		// 	@include MQ(ML){
-		// 	font-size:.8em;
-		// }
+
 	}
 	h3{
 		color:white;
-		// 	@include MQ(ML){
-		// 	font-size:.9em;
-		// }
+
 	}
 	span{
 		color:$text;
 		font-size:.8em;
-		// 	@include MQ(ML){
-		// 	font-size:.9em;
-		// }
+
 	}
 }
 
@@ -207,32 +228,26 @@
 		color:white;
 		font-family:Raleway, Arial, sans-serif;
 		font-size:1em;
-		// @include MQ(ML){
-		// 	font-size:1em;
-		// }
+
 	}
 	p{
 		color:$text;
 		font-size:.8em;
-		// 	@include MQ(ML){
-		// 	font-size:.8em;
-		// }
+
 	}
 	h3{
 		color:white;
 		font-size:.9em;
-		// 	@include MQ(ML){
-		// 	font-size:.9em;
-		// }
+
 	}
 	span{
 		color:$text;
 		font-size:.9em;
-		// 	@include MQ(ML){
-		// 	font-size:.9em;
-		// }
+
 	}
 }
+
+
 
 
 /* Related to addbar on project window */

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url('../fonts/OpenSans-Regular-webfont.eot');
+  src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Regular-webfont.svg') format('svg');
+}
+
+body {
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+}
+
+#addIntervalBtn {
+  margin: 1em 0 0 0;
+}
+
+.new {
+  clear: both;
+  border: 1px solid #CCCCCC;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-top: .2em;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(50%, #cccccc), color-stop(50%, #ffffff));
+  background-image: -webkit-linear-gradient(left, #ffffff, #cccccc 50%, #ffffff 50%);
+  background-image: -moz-linear-gradient(left, #ffffff, #cccccc 50%, #ffffff 50%);
+  background-image: -o-linear-gradient(left, #ffffff, #cccccc 50%, #ffffff 50%);
+  background-image: linear-gradient(left, #ffffff, #cccccc 50%, #ffffff 50%);
+}
+.new .col-md-2 {
+  text-align: center;
+}
+
+.intervalLabel {
+  text-align: center;
+}
+.intervalLabel h3 {
+  color: #85c5e5;
+}

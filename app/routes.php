@@ -22,7 +22,9 @@ Route::get('contact', function(){
 		->with('title', 'Contact me');
 });
 
-
+Route::get('lab', function(){
+	return View::make('labs.lab');
+});
 
 
 Route::post('contact', array('uses'=>'ProjectsController@postContactMe'));

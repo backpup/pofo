@@ -113,7 +113,7 @@ Banner.prototype.smallDisplay = function(skill)
 	.appendTo(skill);
 	this.dotLog = dot;
 	var name = skill.data('name');
-	//$('.inner-expertise p').html(name);
+
 	that.secondAnim.init(name);
 	dot.fadeIn(500, function(){	
 		that.animate();
@@ -121,7 +121,7 @@ Banner.prototype.smallDisplay = function(skill)
 
 };
 
-	
+//this will fix the nav at top on scroll	
 (function(){
 	var navPos = 112;
 	$('#mainNav').offset().top = navPos;
@@ -152,7 +152,6 @@ Banner.prototype.smallDisplay = function(skill)
 
 
 
-
 addressBarAdjuster();
 navbarAdjuster();
 function navbarAdjuster(){
@@ -163,7 +162,6 @@ function navbarAdjuster(){
 function addressBarAdjuster(){
 	var addBar = $(".addressBar");
 		var projectWindowWidth = $('div .project-outer').width();
-		//console.log(projectWindowWidth);
 		if(projectWindowWidth < 330)
 			addBar.css('fontSize', '.7em');
 		else
@@ -226,7 +224,7 @@ if($('#appMessage')[0]!=undefined)
 			$(this).append(overlay);
 			overlay.fadeIn(300, function(){
 				var ol = overlay.width();
-				var mTop = '25%';
+				var mTop = '17%';
 				if(ol<282)
 					mTop=0;
 				else if(ol<385)
@@ -235,12 +233,21 @@ if($('#appMessage')[0]!=undefined)
 				{
 					var projectInfo = that.find('.project-info');
 					projectInfo.css({display:'', zIndex:50, marginTop:mTop}).slideDown(200);
-					if(ol<340)
+					if(ol>475)
+					{
+						if(projectInfo.hasClass('project-info-sm'))
+							projectInfo.removeClass('project-info-sm');
+						projectInfo.addClass('project-info-bg');
+
+					}
+					else if(ol<350)
 					{
 						projectInfo.addClass('project-info-sm');
 					}else{
 						if(projectInfo.hasClass('project-info-sm'))
 							projectInfo.removeClass('project-info-sm');
+						if(projectInfo.hasClass('project-info-bg'))
+							projectInfo.removeClass('project-info-bg');
 					}
 				}
 			});
@@ -258,38 +265,8 @@ if($('#appMessage')[0]!=undefined)
 
 	});
 
-	// (function(){
-	// 	var addBar = $(".addressBar");
-	// 	var projectWindowWidth = $('div .project-outer').width();
-	// 	console.log(projectWindowWidth);
-	// 	if(projectWindowWidth < 330)
-	// 		addBar.css({
-	// 			fontSize:'.7em'
-	// 		});
-
-	// })();
-
 
 });
 
 
 
-
-
-
-// 
-
-
-// navbarAdjuster();
-
-// $(window).on('scroll', function(){
-// 	//navbarAdjuster();
-// 	if($(window).scrollTop()>=500)
-// 	{
-// 		$("#header").addClass("header-animate");
-		
-// 	}else{
-// 		$("#header").removeClass("header-animate");
-		
-// 	}
-// });

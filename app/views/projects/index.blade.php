@@ -7,14 +7,7 @@
 	<h1>Hi,</h1><h1> Thanks for Visiting</h1>
 	<p>I'm Pravin Rai and I'm passionate about web development</p>
 	</div>
-<!-- 	<div class="inner-logo">
-		<div class="logo current-logo">
-			<i class="fa fa-html5 fa-5x"></i>
-		</div>
-		<div class="logo logo-info">
-			<i class="fa fa-code fa-5x"></i>
-		</div>
-	</div> -->
+
 	<div class="inner-expertise">
 	<h2>What i use <i class="fa fa-chevron-right fa-fw"></i></h2><p id="hook"></p>
 		<div class="skill-list">
@@ -63,17 +56,16 @@
 				<p>{{ $project->description }}</p>
 
 				<h3>{{ $project->year }}</h3>
+		
 				<a href="{{ $project->projectLink }}"><h3>Visit</h3></a>
+
 			</div>
 			<img src="assets/img/{{ $project->imageLink }}" alt="">
-			
-			<!-- <span class="type">{{ $project->type }}</span> -->
-
 		</div>  <!--project-outer-->
 
 
 	@endforeach
-		
+
 </section> <!-- home end -->
 </div>
 <div class="divider">
