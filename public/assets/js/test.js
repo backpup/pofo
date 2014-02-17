@@ -214,7 +214,10 @@ if($('#appMessage')[0]!=undefined)
 
 /* ******************************************************* */
 
+
 /* For project windows' interactivity */
+if(navigator.appName != 'Microsoft Internet Explorer')
+{
 	var isOverlay = false;
 	$(".project-outer").on('mouseenter', function(){
 		var that = $(this);
@@ -264,7 +267,40 @@ if($('#appMessage')[0]!=undefined)
 		});
 
 	});
+}else{	
+	$.each($('.project-outer'), function(i, val){
+		var projectInfo = $(this).children('.project-info');
+		var h2 = projectInfo.children('h2').clone();
+		var p = projectInfo.children('p').clone();
+		var h3 = projectInfo.children('h3').clone();
+		var a = projectInfo.children('a');
+		h2.css({
+			color:'#114242'
+		});
+		p.css({
+			color:'#5D5D5D'
+		});
+		h3.css({
+			color:'#B7B7B7'
+		});
+		a.css({
+			color:'#39CCCC'
+		}).hover(
+			function(){
+				$(this).css('color', '#B7B7B7');
+			},
+			function(){
+				$(this).css('color', '#39CCCC')
+			}
+		);
 
+		var parent = $(this).parent();
+		var infoContainer = $('<div>');
+		infoContainer.append(h2).append(p).append(h3).append(a);
+		parent.append(infoContainer);
+
+	});
+}
 
 });
 

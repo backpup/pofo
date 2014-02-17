@@ -6,7 +6,7 @@ $gutter-width: 20px;
 $grid-padding: 10px;
 
 $container-style:magic;
-
+//$legacy-support-for-ie:true;
 
 html{
 	margin:0;
@@ -46,9 +46,15 @@ ul, h1, h2, h3, p, li, header, nav{
 // 	@include squish(4, 4);
 // 	@include span-columns(8);
 // }
-
-.project-outer{
+.projectContainer{
 	@include span-columns(6, 12);
+	&:nth-child(2n) { @include omega; }
+	@include MQ(MS){
+		@include span-columns(12, 12);
+	}
+}
+.project-outer{
+	@include span-columns(6, 6);
 	&:nth-child(2n) { @include omega; }
 	@include MQ(MS){
 		@include span-columns(12, 12);

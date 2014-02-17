@@ -450,10 +450,31 @@ ul, h1, h2, h3, p, li, header, nav {
   display: inline;
 }
 
-.project-outer {
+.projectContainer {
   width: 48.78049%;
   float: left;
   margin-right: 2.43902%;
+  display: inline;
+}
+.projectContainer:nth-child(2n) {
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+@media only screen and (max-width: 750px) {
+  .projectContainer {
+    width: 100%;
+    float: left;
+    margin-right: 2.43902%;
+    display: inline;
+  }
+}
+
+.project-outer {
+  width: 100%;
+  float: left;
+  margin-right: 5%;
   display: inline;
 }
 .project-outer:nth-child(2n) {
@@ -2591,6 +2612,9 @@ nav a:hover {
   padding-left: 8px;
   color: #BFE1FF;
   border: 1px solid #c6c5c5;
+}
+.addressBar:hover {
+  color: #fbae2c;
 }
 
 /* ********************** */

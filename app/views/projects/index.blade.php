@@ -43,7 +43,7 @@
 <div class="homeWrapper">
 <section class="home">
 	@foreach($projects as $project)
-		
+	<div class="projectContainer">
 		<div class="project-outer">
 			<div class="addbar">
 				<div class="circle red"></i></div>
@@ -51,6 +51,7 @@
 				<div class="circle yellow"></div>
 				<a class = "addressBar" href="{{ $project->projectLink }}">{{ $project->projectLink }}</a>
 			</div>
+
 			<div class="project-info">
 				<h2>{{ $project->title }}</h2>
 				<p>{{ $project->description }}</p>
@@ -62,6 +63,7 @@
 			</div>
 			<img src="assets/img/{{ $project->imageLink }}" alt="">
 		</div>  <!--project-outer-->
+	</div><!--project-container-->
 
 
 	@endforeach
