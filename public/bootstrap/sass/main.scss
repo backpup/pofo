@@ -3,7 +3,9 @@
 
 @include font-face("OpenSans", font-files("OpenSans-Regular-webfont.woff", "OpenSans-Regular-webfont.ttf", 
 	"OpenSans-Regular-webfont.svg"), "OpenSans-Regular-webfont.eot");
-
+html, body{
+	height:100%;
+}
 body{
 	font-family:OpenSans, Arial, Helvetica, sans-serif;
 }
@@ -21,6 +23,7 @@ body{
 		text-align:center;
 	}
 }
+
 
 
 .intervalLabel{
@@ -51,4 +54,20 @@ body{
 	@include clearfix;
 	padding:2em;
 	margin-bottom:20px;
+}
+
+.overlay{
+	position:fixed;
+	width:100%;
+	height:100%;
+	//background:#DDDDDD;
+	background: #DDDDDD;
+    background-image:linear-gradient(#434343, #282828);
+    background-image:linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+	color:white;
+	background-size:30px 30px;
+	z-index:10;
+	@include opacity(.5);
+	top:0;
+	left:0;
 }

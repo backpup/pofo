@@ -4,14 +4,16 @@
 
 
 <div class="container">
+
 	<div class="panel panel-info ">
 		<div class="panel-heading">
 			<h2 class="panel-title">Hello there</h2>
 		</div>
 		<div class="panel-body">
 		<p>Here you will find stuff I created as an experiment or because I had need for it at one point or another. Trivial bits of code that probably won't be of any use to most. Decided to leave it here just in case someone finds use for it as I had at one point.</p>
-		</div>
+
 	</div><!--panel-->
+	</div>
 	<div class="page-header">
 		<h4>VLC playlist generator</h4>
 	</div>
@@ -22,7 +24,7 @@
 	<div class="app">
 	<section class="playlist-generator">
 		<div class="col-md-8 col-md-offset-2">
-			<label for ="fileLocation">File Location:</label>&nbsp;&nbsp;<a href="">How to get it</a>
+			<label for ="fileLocation">File Location:</label>&nbsp;&nbsp;<a href="#" id="instruction">How to get it</a>
 			<input type="text" id="fileLocation" class="form-control" placeholder="location of file goes here"/>
 
 			<p class="pull-right">

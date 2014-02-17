@@ -147,10 +147,11 @@ RowManager.prototype.getInputs = function(row){
 RowManager.prototype.calculateTime=function(j, array, location)
 {
 	var resultB = "";
-	var startTime = parseInt(array[0])*3600 + parseInt(array[1])*60 + parseInt(array[2])*60;
+	console.log(array);
+	var startTime = parseInt(array[0])*3600 + parseInt(array[1])*60 + parseInt(array[2]);
 	var startTime = parseInt(startTime).toFixed(3);
 
-	var stopTime = parseInt(array[3])*3600 + parseInt(array[4])*60 + parseInt(array[5])*60;
+	var stopTime = parseInt(array[3])*3600 + parseInt(array[4])*60 + parseInt(array[5]);
 	var stopTime = parseInt(stopTime).toFixed(3);
 
 	resultB += '<track>\n';
@@ -188,6 +189,24 @@ RowManager.prototype.combineAndOutput=function(){
 }
 
 $(document).ready(function(){
+	$('#fileLocation').val('');
 	var rowMg = new RowManager();
+
+
+	$('#instruction').on('click', function(){
+		var parent = $('<div>').css('display', 'none').attr('id', 'parent');
+		var overlay = $('<div>').addClass("overlay").appendTo($('body'));
+
+		overlay.appendTo(parent);
+		var img = $('<img>').attr({
+			src:'bootstrap/img/instruction.jpg'
+		}).css({position:'absolute', zIndex:99, top:'15%', right:'15%'});
+		img.appendTo(parent);
+		$('body').append(parent);
+		parent.css('display', 'block').click(function(){
+			$(this).remove();
+		});
+		return false;
+	})
 });
 	
