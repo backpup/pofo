@@ -34,3 +34,32 @@ body {
 .intervalLabel h3 {
   color: #85c5e5;
 }
+
+.close {
+  position: absolute;
+  font-size: 25px;
+  right: 5px;
+  top: 30px;
+  color: red;
+}
+
+#result {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.app {
+  background-image: linear-gradient(#434343, #282828);
+  background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
+  background-size: 60px 60px;
+  border: 2px solid #DDDDDD;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  *zoom: 1;
+  padding: 2em;
+  margin-bottom: 20px;
+}

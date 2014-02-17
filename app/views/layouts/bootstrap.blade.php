@@ -12,7 +12,7 @@
 	<div class="navbar navbar-default navbar-static-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-				<h2>My experiments</h2>
+				<h2>Experiments</h2>
 			</div><!--navbar-header-->
 		</div><!--container-->
 	</div><!--navbar-->
