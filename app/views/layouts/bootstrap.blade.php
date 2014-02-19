@@ -6,7 +6,6 @@
 	<title>My Lab</title>
 	{{ HTML::style('/bootstrap/css/screen.css') }}
 	{{ HTML::style('/bootstrap/css/main.css') }}
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 	<div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -19,7 +18,7 @@
 	
 	@yield('content')
 
-
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	{{ HTML::script('/bootstrap/js/bootstrap.min.js') }}
 	{{ HTML::script('/bootstrap/js/myscript.js') }}
 </body>

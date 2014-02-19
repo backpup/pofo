@@ -6,7 +6,6 @@
 	<title>{{ $title }}</title>
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	{{ HTML::style('/assets/css/screen.css') }}
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 
@@ -38,7 +37,7 @@
 		&copy; PRAVIN RAI {{ date('Y') }}
 	</footer>
 </div> <!-- close wrapper -->
-
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 {{ HTML::script('/assets/js/project.min.js') }}
 </body>
 </html>
