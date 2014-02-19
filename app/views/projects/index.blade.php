@@ -46,7 +46,7 @@
 	<div class="projectContainer">
 		<div class="project-outer">
 			<div class="addbar">
-				<div class="circle red"></i></div>
+				<div class="circle red"></div>
 				<div class="circle green"></div>
 				<div class="circle yellow"></div>
 				<a class = "addressBar" href="{{ $project->projectLink }}">{{ $project->projectLink }}</a>
