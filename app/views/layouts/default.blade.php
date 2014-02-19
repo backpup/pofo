@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ $title }}</title>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	{{ HTML::style('/assets/css/screen.css') }}
-	{{ HTML::script('/assets/js/jquery.js') }}
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 
@@ -38,6 +39,6 @@
 	</footer>
 </div> <!-- close wrapper -->
 
-{{ HTML::script('/assets/js/test.js') }}
+{{ HTML::script('/assets/js/project.min.js') }}
 </body>
 </html>

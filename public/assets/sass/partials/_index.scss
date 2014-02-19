@@ -35,14 +35,7 @@
 		text-transform:uppercase;
 	}
 }
-// .inner-logo{
-// 	@include pull(2);
-// 	@include span-columns(6 omega,16);
-// 	// .logo{
-// 	// 	@include span-columns(3,6);
-// 	// 	&:nth-child(2n){ @include omega; }
-	
-// }
+
 .inner-expertise{
 	margin-top:3em;
 	@include pad(1,1);

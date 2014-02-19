@@ -11,6 +11,11 @@
 |
 */
 
+App::missing(function($exception)
+{
+	return Response::view('projects.missing', array(), 404);
+});
+
 Route::get('/', array('as'=>'home', 'uses'=>'ProjectsController@getIndex'));
 
 Route::get('profile', function(){

@@ -6,7 +6,7 @@
 	<title>My Lab</title>
 	{{ HTML::style('/bootstrap/css/screen.css') }}
 	{{ HTML::style('/bootstrap/css/main.css') }}
-	{{ HTML::script('/bootstrap/js/jquery.js') }}
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 	<div class="navbar navbar-default navbar-static-top" role="navigation">
