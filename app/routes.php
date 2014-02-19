@@ -23,8 +23,7 @@ Route::get('profile', function(){
 		->with('title', 'About me');
 });
 Route::get('contact', function(){
-	return View::make('projects.contact')
-		->with('title', 'Contact me');
+	return Redirect::to('/');
 });
 
 Route::get('lab', function(){
