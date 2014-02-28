@@ -20,14 +20,14 @@
 			<div class="skills" data-name="javascript">
 				<i class="fa fa-code fa-3x"></i>
 			</div>
-			<div class="skills jquery" data-img="jquery" data-name="jquery">
-	
+			<div class="skills" data-img="jquery" data-name="jquery">
+				<img src="assets/img/jquery.png" />
 			</div>
-			<div class="skills php" data-img="php" data-name="php">
-	
+			<div class="skills" data-img="php" data-name="php">
+				<img src="assets/img/php.png" />
 			</div>
-			<div class="skills laravel" data-img="laravel" data-name="laravel">
-		
+			<div class="skills" data-img="laravel" data-name="laravel">
+				<img src="assets/img/laravel.png" />
 			</div>
 			<div class="skills" data-name="linux">
 				<i class="fa fa-linux fa-3x"></i>
