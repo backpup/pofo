@@ -75,7 +75,7 @@
 	<h1 class="info">Get in Touch with me</h1>
 </div>
 
-<div class="mainContact">
+<section class="contactMe">
 
 @if(Session::has('appMsg'))
 <div class="appMessage">
@@ -116,5 +116,5 @@
 	{{ Form::submit('send') }}
 {{ Form::close() }}
 </div><!--End form container-->
-</div>
+</section>
 @endsection
