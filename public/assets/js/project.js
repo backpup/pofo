@@ -41,7 +41,6 @@ wordAnimate.prototype.typeAnim=function(letter)
 /* For banner interactivity */ 
 
 var Banner = function(classBanner){
-	this.skillsWithImg = [];
 	this.banner = $('.'+classBanner);
 	this.counter = 0;
 
@@ -52,21 +51,15 @@ var Banner = function(classBanner){
 
 	/* ********************* */
 
-
-/* setting it up by giving ids to the skills in the list and storing them */
-/* storing ones with data-img separately */
 	var tempSkillsArray = [];
-	var tempSkillsWithImgArray = [];
+	
 	$.each(this.banner.children(), function(i, val){
+
 		var skill = $(val).attr('id', "skill_"+i);
-		
 		tempSkillsArray.push(skill);
-		if(skill.data('img'))
-			tempSkillsWithImgArray.push(skill);
 
 	});
 	this.skillsList = tempSkillsArray;
-	this.skillswithImg = tempSkillsWithImgArray;
 };
 
 Banner.prototype.init = function(){
@@ -198,7 +191,7 @@ if($('#appMessage')[0]!==undefined)
 	nav.scrollTo(1688);
 }
 
- $(document).ready(function(){
+ $(window).load(function(){
 	var checkBanner = new Banner('skill-list');
 	checkBanner.init();
 
