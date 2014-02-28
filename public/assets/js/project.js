@@ -1,4 +1,7 @@
 
+
+//This module/object will be responsible for animating the text
+
 var wordAnimate = function(id, duration){
 	this.word = $("#"+id);
 	this.secondCounter = 0;
@@ -93,7 +96,7 @@ Banner.prototype.smallDisplay = function(skill)
 		this.dotLog.remove();  //has to exist before it can be removed
 	var skillWidth = skill.width();
 	var adjustedPos = '20px';
-	if(skillWidth<83)
+	if(skillWidth<83)         //adjustments for smaller screens
 		adjustedPos="-10px";
 	else if(skillWidth<135)
     adjustedPos = '-5px';
@@ -143,7 +146,7 @@ Banner.prototype.smallDisplay = function(skill)
 
 
 
-
+//misc functions for adjustments on browser lookalike project lists
 addressBarAdjuster();
 navbarAdjuster();
 function navbarAdjuster(){
@@ -259,7 +262,8 @@ if(navigator.appName != 'Microsoft Internet Explorer')
 		});
 
 	});
-}else{	
+}else{	//Ie has problem displaying the absolutely positioned elements
+		//on top of absolutely positioned elements in some versions
 	$.each($('.project-outer'), function(i, val){
 		var projectInfo = $(this).children('.project-info');
 		var h2 = projectInfo.children('h2').clone();

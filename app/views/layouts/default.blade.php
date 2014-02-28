@@ -10,34 +10,31 @@
 <body>
 
 <div class="wrapper">
-<section id="top">
 
-<div id="navBar">
-	<header id="header">
-		<h1 id="mainHeader">
+<header>
+		<h1 id="myInitials">
 		<span class="header-hero">P</span>
 		<span class="header-sidekick">R</span>
 
 		</h1>
-	</header>
-	<nav id="mainNav">
+
+	<nav id="mainNav" role="navigation">
 		<ul>
 			<li>{{ HTML::link('/', 'Home', array('class'=>"mainLink"))}}</li>
 			<li><a href="#" class="mainLink">Portfolio</a></li>
 			<li><a href="#" class="mainLink">Contact</a></li>
 		</ul>
 	</nav>
+</header>
 
-</div>
-
-</section>
 
 	@yield('content')
-	<footer>
+
+<footer>
 		&copy; PRAVIN RAI {{ date('Y') }}
-	</footer>
+</footer>
 </div> <!-- close wrapper -->
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-{{ HTML::script('/assets/js/project.min.js') }}
+{{ HTML::script('/assets/js/project.js') }}
 </body>
 </html>

@@ -71,20 +71,12 @@ footer{
 	text-align:center;
 }
 
-/*base styles*/
-#top{
-	//position:fixed;
-	//width:1100px;
-	//width:100%;
-	background:#F6F6F6;
 
-	// top:0;
-	// z-index:99;
-}
 
 header{
 	padding:2em 0;
 	text-align:center;
+	background:#F6F6F6;
 	//font-size:1.4em;
 	color:$banner2;
 	overflow:hidden;
@@ -98,9 +90,6 @@ header{
 
 }
 
-.header-animate{
-	padding:.6em 0;
-}
 
 a{
 	text-decoration:none;
