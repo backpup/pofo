@@ -198,7 +198,7 @@ if($('#appMessage')[0]!==undefined)
  	setTimeout(function(){
  		var checkBanner = new Banner('skill-list');
 		checkBanner.init();
- 	}, 2000);
+ 	}, 1000);
 
 
 /* For contact page interactivity */
