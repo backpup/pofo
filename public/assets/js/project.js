@@ -68,11 +68,11 @@ var Banner = function(classBanner){
 Banner.prototype.init = function(){
 	var num = Math.floor(Math.random()*8);
 	var dot = $('<i class="fa fa-square dot"></i>');
-	$('.inner-expertise p').html(this.skillsList[num].data('name'));
-	this.skillsList[num].append(dot);
+	// $('.inner-expertise p').html(this.skillsList[num].data('name'));
+	// this.skillsList[num].append(dot);
 	this.dotLog=dot;
 	/* so that animate will move things +1 forward */
-	this.counter = num+1;
+	this.counter = num;
 	this.animate();
 
 };
@@ -195,8 +195,11 @@ if($('#appMessage')[0]!==undefined)
 }
 
  $(window).load(function(){
-	var checkBanner = new Banner('skill-list');
-	checkBanner.init();
+ 	setTimeout(function(){
+ 		var checkBanner = new Banner('skill-list');
+		checkBanner.init();
+ 	}, 2000);
+
 
 /* For contact page interactivity */
 	$(".input-group").each(function(){
