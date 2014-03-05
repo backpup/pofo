@@ -35,6 +35,6 @@
 </footer>
 </div> <!-- close wrapper -->
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-{{ HTML::script('/assets/js/project.js') }}
+{{ HTML::script('/assets/js/project.min.js') }}
 </body>
 </html>

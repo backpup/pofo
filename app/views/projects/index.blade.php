@@ -4,8 +4,9 @@
 @section('content')
 <div id="banner">
 	<div class="inner-intro">
-	<h1>Hi,</h1><h1> Thanks for Visiting</h1>
-	<p>I'm Pravin Rai and I'm passionate about web development</p>
+		<h1>Hi,</h1>
+		<h1> Thanks for Visiting</h1>
+		<p>I'm Pravin Rai and I'm passionate about web development</p>
 	</div>
 
 	<div class="inner-expertise">
@@ -39,7 +40,7 @@
 	</div><!--inner-expertise end-->
 	
 </div>
-<!-- <div class="sectionDivider"></div> -->
+
 <div class="homeWrapper">
 <section class="home">
 	@foreach($projects as $project)

@@ -31,24 +31,25 @@
 			<button type="button" id="addIntervalBtn" class="btn btn-primary">Add More Intervals</button>
 			</p>
 		</div>
-		<div class="intervalLabel col-md-6"><h3>Start Time</h3></div>
-		<div class="intervalLabel col-md-6"><h3>End Time</h3></div>
-		<div class=" new col-md-6 col-md-offset-3 col-sm-12">
+		<div class="row clear">
+		<div class="intervalLabel col-md-6 col-xs-6"><h3>Start Time</h3></div>
+		<div class="intervalLabel col-md-6 col-xs-6"><h3>End Time</h3></div>
+		</div>
+		<div class=" new col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
 			<button type="button" class="close" aria-hidden="true">&times;</button>
-			<div class="col-md-2 col-sm-2">
+			<div class="col-md-2 col-sm-2 col-xs-2">
 				<label for ="">Hour</label>
 				<div class="input-group">
 					<input type="text" class="form-control hour" placeholder="00">
 				</div>
 			</div>
-			<div class="col-md-2 col-sm-2">
+			<div class="col-md-2 col-sm-2 col-xs-2">
 			<label for ="">Minutes</label>
 				<div class="input-group">
-		
 					<input type="text" class="form-control minutes" placeholder="00">
 				</div>
 			</div>
-				<div class="col-md-2 col-sm-2">
+				<div class="col-md-2 col-sm-2 col-xs-2">
 			<label for ="">Seconds</label>
 				<div class="input-group">
 		
@@ -56,21 +57,21 @@
 				</div>
 			</div>
 
-			<div class="col-md-2 col-sm-2">
+			<div class="col-md-2 col-sm-2 col-xs-2">
 			<label for ="">Hour</label>
 				<div class="input-group">
 		
 					<input type="text" class="form-control hour" placeholder="00">
 			</div>
 			</div>
-			<div class="col-md-2 col-sm-2">
+			<div class="col-md-2 col-sm-2 col-xs-2">
 			<label for ="">Minutes</label>
 				<div class="input-group">
 			
 					<input type="text" class="form-control minutes" placeholder="00">
 			</div>
 			</div>
-			<div class="col-md-2 col-sm-2">
+			<div class="col-md-2 col-sm-2 col-xs-2">
 			<label for ="">Seconds</label>
 				<div class="input-group">
 

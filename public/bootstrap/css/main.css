@@ -32,6 +32,10 @@ body {
   text-align: center;
 }
 
+.clear {
+  clear: both;
+}
+
 .intervalLabel {
   text-align: center;
 }
