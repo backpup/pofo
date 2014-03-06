@@ -1,7 +1,7 @@
 
 /*Note to self*/
 /*For whatever reason I have row and button ids going form 0 and up
-and inuput ids going from 1 and up */
+and input ids going from 1 and up */
 
 var RowManager = function(){
 	var that=this;
