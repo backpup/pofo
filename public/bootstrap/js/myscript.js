@@ -104,12 +104,13 @@ RowManager.prototype.validateOnBlur=function(id){
 };
 
 RowManager.prototype.calculate = function(){
-	console.log(this._timeList.length);
 	var location = $("#fileLocation").val();
 	this.resultPortionB = "";
 	this.resultsArray=new Array();
-	if(location=="")
+	if(location==""){
+		$('#result').val('The file location can not be empty');
 		return;
+	}
 	for(var i = 0; i<this._timeList.length; i++)
 	{
 		this.getInputs(this._timeList[i]);
@@ -147,7 +148,6 @@ RowManager.prototype.getInputs = function(row){
 RowManager.prototype.calculateTime=function(j, array, location)
 {
 	var resultB = "";
-	console.log(array);
 	var startTime = parseInt(array[0])*3600 + parseInt(array[1])*60 + parseInt(array[2]);
 	var startTime = parseInt(startTime).toFixed(3);
 
