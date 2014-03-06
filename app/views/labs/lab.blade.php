@@ -85,7 +85,7 @@
 			<button type="button" id="calculateBtn" class="btn btn-success">Calculate</button>
 			<button type="button" id="clearBtn" class="btn btn-success">Clear Result</button>
 			<textarea class="form-control" id="result" rows="15"></textarea>
-
+			<div class="alert alert-success">Save the result of your calculation using a text editor in .xspf format. &lt;Your desired filename&gt;.xspf</div>
 		</div>
 
 	</section>
