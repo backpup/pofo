@@ -67,6 +67,7 @@ RowManager.prototype.removeRow=function(id){
 	row.remove();
 }
 
+/** Validate and move onto the next inputbox if there is one **/
 RowManager.prototype.validateAndMove=function(id){
 	var input = $('#'+id);
 	var val = input.val();
@@ -193,6 +194,8 @@ $(document).ready(function(){
 	var rowMg = new RowManager();
 
 
+
+	/** Instructtion on how to get the filename **/
 	$('#instruction').on('click', function(){
 		var parent = $('<div>').css('display', 'none').attr('id', 'parent');
 		var overlay = $('<div>').addClass("overlay").appendTo($('body'));

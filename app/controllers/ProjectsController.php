@@ -41,7 +41,7 @@ class ProjectsController extends BaseController{
 				$message->to('ikiratrai@gmail.com', 'Gao')->subject('You cool');
 
 			});
-			return Redirect::to('contact')
+			return Redirect::to('/')
 				->with('appMsg', 'Thanks, will get in touch soon');
 		}else{
 			return Redirect::to('/')->withErrors($validator)->withInput();

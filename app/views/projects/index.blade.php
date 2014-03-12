@@ -72,8 +72,8 @@
 </section> <!-- home end -->
 </div>
 <div class="divider">
-	<h1 class="intro">Want to say hi?</h1>
-	<h1 class="info">Get in Touch with me</h1>
+	<h1 class="intro">Want to talk?</h1>
+	<h1 class="info">Get in Touch</h1>
 </div>
 
 <section class="contactMe">

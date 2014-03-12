@@ -18,13 +18,6 @@ App::missing(function($exception)
 
 Route::get('/', array('as'=>'home', 'uses'=>'ProjectsController@getIndex'));
 
-Route::get('profile', function(){
-	return View::make('projects.profile')
-		->with('title', 'About me');
-});
-Route::get('contact', function(){
-	return Redirect::to('/');
-});
 
 Route::get('lab', function(){
 	return View::make('labs.lab');
